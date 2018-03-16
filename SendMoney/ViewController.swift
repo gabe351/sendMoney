@@ -7,11 +7,33 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let parameters: Parameters = [
+            "nome" : "gabe",
+            "email": "aaa@sss.com.br"
+        ]
+        
+        Alamofire.request("https://swapi.co/api/people/1", method: .get, parameters: parameters)
+            .responseJSON { dataResponse in
+            
+            switch(dataResponse.result) {
+                
+            case .success(let value):
+                print("Sucess")
+            break
+                
+            case .failure(let error):
+                print("error")
+            break
+            }
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
