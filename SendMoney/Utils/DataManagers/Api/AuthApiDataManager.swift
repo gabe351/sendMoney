@@ -13,12 +13,10 @@ public class AuthenticationApiDataManager {
     
     func authenticate(_ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
         let param: Parameters = [
-            "email"       : "anderson.fernandes@stant.com.br",
-            "password"    : "12345678",
-            "device_id"   : "idiOS",
-            "device_type" : "android"
+            "nome"    : "joao das neves",
+            "email"   : "anderson.fernandes@stant.com.br"
         ]
-        Alamofire.request("http://stage.stant.com.br/api//v1/authenticate/access_token", method: .post, parameters: param)
+        Alamofire.request("HERE WILL HAVE URL", method: .post, parameters: param)
             
             .responseJSON { dataResponse in
                 
