@@ -14,14 +14,5 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AuthenticationApiDataManager().authenticate { (apiCallback) in
-            apiCallback.onSuccess() { (value) in
-                print("success")                
-            }
-            
-            apiCallback.onFailed() { (_) in
-                print("failed")
-            }
-        }
     }
 }

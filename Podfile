@@ -6,6 +6,7 @@ target 'SendMoney' do
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON'
+  pod 'UIColor_Hex_Swift', '~> 4.0.1'
 
   target 'SendMoneyTests' do
     inherit! :search_paths

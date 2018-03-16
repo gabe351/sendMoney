@@ -18,6 +18,10 @@
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
 		7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */; };
 		9940AEEB28041FE1EC35750B /* Pods_SendMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */; };
+		F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */; };
+		F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */; };
+		F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */; };
+		F4049B45205C0AB900434B9E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B44205C0AB900434B9E /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FA09B3F38EC755018E257C /* Pods-SendMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney.release.xcconfig"; sourceTree = "<group>"; };
+		F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRemoteDataSource.swift; sourceTree = "<group>"; };
+		F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBlueButton.swift; sourceTree = "<group>"; };
+		F4049B44205C0AB900434B9E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,8 @@
 			children = (
 				0463953D205B5F8600258597 /* DataManagers */,
 				04639543205B611E00258597 /* Enums */,
+				F4049B40205C049700434B9E /* IBDesignables */,
+				F4049B43205C0AA100434B9E /* Extension */,
 				04639541205B60CA00258597 /* BaseCallback.swift */,
 			);
 			path = Utils;
@@ -221,8 +231,26 @@
 		F4049B3B205BF3D300434B9E /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */,
+				F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F4049B40205C049700434B9E /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
+		F4049B43205C0AA100434B9E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4049B44205C0AB900434B9E /* UIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,11 +438,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,10 +474,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
+				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
+				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
+				F4049B45205C0AB900434B9E /* UIColor.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataManager.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
+				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
