@@ -13,6 +13,8 @@
 		042F150E205B3EB000F57795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042F150D205B3EB000F57795 /* Assets.xcassets */; };
 		042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042F150F205B3EB000F57795 /* LaunchScreen.storyboard */; };
 		042F151C205B3EB000F57795 /* SendMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F151B205B3EB000F57795 /* SendMoneyTests.swift */; };
+		7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */; };
+		9940AEEB28041FE1EC35750B /* Pods_SendMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		042F1517205B3EB000F57795 /* SendMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042F151B205B3EB000F57795 /* SendMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyTests.swift; sourceTree = "<group>"; };
 		042F151D205B3EB000F57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5412FE43B45CD15028728F30 /* Pods-SendMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71064EC0DC27F6108716813D /* Pods-SendMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FA09B3F38EC755018E257C /* Pods-SendMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9940AEEB28041FE1EC35750B /* Pods_SendMoneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				042F1505205B3EB000F57795 /* SendMoney */,
 				042F151A205B3EB000F57795 /* SendMoneyTests */,
 				042F1504205B3EB000F57795 /* Products */,
+				C3A4BF7184B588489EC6786F /* Pods */,
+				34A877F402E063CD211A3D69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = SendMoneyTests;
 			sourceTree = "<group>";
 		};
+		34A877F402E063CD211A3D69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */,
+				E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A4BF7184B588489EC6786F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71064EC0DC27F6108716813D /* Pods-SendMoney.debug.xcconfig */,
+				F3FA09B3F38EC755018E257C /* Pods-SendMoney.release.xcconfig */,
+				5412FE43B45CD15028728F30 /* Pods-SendMoneyTests.debug.xcconfig */,
+				4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 042F1520205B3EB000F57795 /* Build configuration list for PBXNativeTarget "SendMoney" */;
 			buildPhases = (
+				3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */,
 				042F14FF205B3EB000F57795 /* Sources */,
 				042F1500205B3EB000F57795 /* Frameworks */,
 				042F1501205B3EB000F57795 /* Resources */,
+				85CF1383F360143213718F43 /* [CP] Embed Pods Frameworks */,
+				311693F037EE531752CEDECE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 042F1523205B3EB000F57795 /* Build configuration list for PBXNativeTarget "SendMoneyTests" */;
 			buildPhases = (
+				36540865518F12DF14F65053 /* [CP] Check Pods Manifest.lock */,
 				042F1513205B3EB000F57795 /* Sources */,
 				042F1514205B3EB000F57795 /* Frameworks */,
 				042F1515205B3EB000F57795 /* Resources */,
+				51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */,
+				E3F1A1AAAB49D0926C9D6175 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311693F037EE531752CEDECE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36540865518F12DF14F65053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85CF1383F360143213718F43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F1A1AAAB49D0926C9D6175 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		042F14FF205B3EB000F57795 /* Sources */ = {
@@ -351,6 +482,7 @@
 		};
 		042F1521205B3EB000F57795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71064EC0DC27F6108716813D /* Pods-SendMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +498,7 @@
 		};
 		042F1522205B3EB000F57795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3FA09B3F38EC755018E257C /* Pods-SendMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +514,7 @@
 		};
 		042F1524205B3EB000F57795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5412FE43B45CD15028728F30 /* Pods-SendMoneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -398,6 +532,7 @@
 		};
 		042F1525205B3EB000F57795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
