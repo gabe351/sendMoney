@@ -13,7 +13,7 @@
 		042F151C205B3EB000F57795 /* SendMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F151B205B3EB000F57795 /* SendMoneyTests.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
-		04639540205B5FF300258597 /* AuthApiDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* AuthApiDataManager.swift */; };
+		04639540205B5FF300258597 /* ApiDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataManager.swift */; };
 		04639542205B60CA00258597 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639541205B60CA00258597 /* BaseCallback.swift */; };
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
 		7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */; };
@@ -41,7 +41,7 @@
 		042F151D205B3EB000F57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0463953F205B5FF300258597 /* AuthApiDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiDataManager.swift; sourceTree = "<group>"; };
+		0463953F205B5FF300258597 /* ApiDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataManager.swift; sourceTree = "<group>"; };
 		04639541205B60CA00258597 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
 		4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		042F1505205B3EB000F57795 /* SendMoney */ = {
 			isa = PBXGroup;
 			children = (
-				04639546205B62E500258597 /* Modules */,
 				04639539205B5B2100258597 /* Application */,
+				F4049B39205BF39E00434B9E /* Infrastructure */,
 				0463953C205B5F5200258597 /* Utils */,
 				0463953B205B5F3800258597 /* Assets */,
 				042F1512205B3EB000F57795 /* Info.plist */,
@@ -125,6 +125,7 @@
 		04639539205B5B2100258597 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04639546205B62E500258597 /* Modules */,
 				042F1506205B3EB000F57795 /* AppDelegate.swift */,
 				042F150F205B3EB000F57795 /* LaunchScreen.storyboard */,
 			);
@@ -160,7 +161,7 @@
 		0463953E205B5F9A00258597 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				0463953F205B5FF300258597 /* AuthApiDataManager.swift */,
+				0463953F205B5FF300258597 /* ApiDataManager.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -199,6 +200,29 @@
 				4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4049B39205BF39E00434B9E /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F4049B3A205BF3B200434B9E /* Remote */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		F4049B3A205BF3B200434B9E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F4049B3B205BF3D300434B9E /* Authentication */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		F4049B3B205BF3D300434B9E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,13 +351,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SendMoneyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -342,13 +369,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SendMoney-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */ = {
@@ -357,9 +387,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,9 +407,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,7 +446,7 @@
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
-				04639540205B5FF300258597 /* AuthApiDataManager.swift in Sources */,
+				04639540205B5FF300258597 /* ApiDataManager.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

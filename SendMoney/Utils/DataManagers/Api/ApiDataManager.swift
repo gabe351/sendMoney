@@ -9,31 +9,21 @@
 import Foundation
 import Alamofire
 
-public class AuthenticationApiDataManager {
+public class ApiDataManager {
     
-    func authenticate(_ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
-        let param: Parameters = [
-            "nome"    : "joao das neves",
-            "email"   : "anderson.fernandes@stant.com.br"
-        ]
-        Alamofire.request("HERE WILL HAVE URL", method: .post, parameters: param)
-            
+    func request(url: String, parameters: Parameters, method: HTTPMethod, _ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
+        Alamofire.request(url, method: method, parameters: parameters)
             .responseJSON { dataResponse in
-                
                 switch(dataResponse.result) {
                     
                 case .success(let value):
                     loadCallback(BaseCallback.success(value))
-                    print("Success")
                 break
                     
                 case .failure(let error):
                     loadCallback(BaseCallback.failed(error: error))
-                    print("error")
                 break
-                }
+            }
         }
-        
     }
-    
 }
