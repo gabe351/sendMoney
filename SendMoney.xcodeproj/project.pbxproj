@@ -92,7 +92,6 @@
 				04639539205B5B2100258597 /* Application */,
 				04639534205B516B00258597 /* Home */,
 				042F150D205B3EB000F57795 /* Assets.xcassets */,
-				042F150F205B3EB000F57795 /* LaunchScreen.storyboard */,
 				042F1512205B3EB000F57795 /* Info.plist */,
 			);
 			path = SendMoney;
@@ -120,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				042F1506205B3EB000F57795 /* AppDelegate.swift */,
+				042F150F205B3EB000F57795 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
