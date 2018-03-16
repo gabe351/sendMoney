@@ -9,5 +9,8 @@ target 'SendMoney' do
 
   target 'SendMoneyTests' do
     inherit! :search_paths
+
+    pod 'Quick', git: 'https://github.com/Quick/Quick.git', branch: 'master'
+    pod 'Nimble'
   end
 end
