@@ -11,9 +11,20 @@
 		042F150E205B3EB000F57795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042F150D205B3EB000F57795 /* Assets.xcassets */; };
 		042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042F150F205B3EB000F57795 /* LaunchScreen.storyboard */; };
 		042F151C205B3EB000F57795 /* SendMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F151B205B3EB000F57795 /* SendMoneyTests.swift */; };
+		0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFD8205D27540049B214 /* RemoteUtils.swift */; };
+		0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFDD205D2F130049B214 /* HomeContract.swift */; };
+		0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFDF205D30020049B214 /* HomePresenter.swift */; };
+		0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFE3205D305E0049B214 /* GetAuth.swift */; };
+		0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFE7205D34590049B214 /* SessionLocalDataSource.swift */; };
+		0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFE9205D34C50049B214 /* SessionLocalDataSourceImpl.swift */; };
+		0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFEB205D35F30049B214 /* SaveSessionToken.swift */; };
+		0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFEE205D377B0049B214 /* InjectionLocalDataSource.swift */; };
+		0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */; };
+		0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF2205D38140049B214 /* InjectionUseCase.swift */; };
+		0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
-		04639540205B5FF300258597 /* ApiDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataManager.swift */; };
+		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
 		04639542205B60CA00258597 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639541205B60CA00258597 /* BaseCallback.swift */; };
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
 		7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */; };
@@ -43,9 +54,20 @@
 		042F1517205B3EB000F57795 /* SendMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042F151B205B3EB000F57795 /* SendMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyTests.swift; sourceTree = "<group>"; };
 		042F151D205B3EB000F57795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0437EFD8205D27540049B214 /* RemoteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUtils.swift; sourceTree = "<group>"; };
+		0437EFDD205D2F130049B214 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		0437EFDF205D30020049B214 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		0437EFE3205D305E0049B214 /* GetAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuth.swift; sourceTree = "<group>"; };
+		0437EFE7205D34590049B214 /* SessionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLocalDataSource.swift; sourceTree = "<group>"; };
+		0437EFE9205D34C50049B214 /* SessionLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		0437EFEB205D35F30049B214 /* SaveSessionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSessionToken.swift; sourceTree = "<group>"; };
+		0437EFEE205D377B0049B214 /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
+		0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionRemoteDataSource.swift; sourceTree = "<group>"; };
+		0437EFF2205D38140049B214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
+		0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyApplication.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0463953F205B5FF300258597 /* ApiDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataManager.swift; sourceTree = "<group>"; };
+		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
 		04639541205B60CA00258597 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
 		4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,11 +143,65 @@
 			path = SendMoneyTests;
 			sourceTree = "<group>";
 		};
+		0437EFDA205D2DBA0049B214 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0437EFE1205D304D0049B214 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0437EFE2205D30580049B214 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0437EFE2205D30580049B214 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0437EFE3205D305E0049B214 /* GetAuth.swift */,
+				0437EFEB205D35F30049B214 /* SaveSessionToken.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		0437EFE5205D34090049B214 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				0437EFE6205D343D0049B214 /* Session */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		0437EFE6205D343D0049B214 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				0437EFE7205D34590049B214 /* SessionLocalDataSource.swift */,
+				0437EFE9205D34C50049B214 /* SessionLocalDataSourceImpl.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		0437EFED205D37670049B214 /* Injections */ = {
+			isa = PBXGroup;
+			children = (
+				0437EFF2205D38140049B214 /* InjectionUseCase.swift */,
+				0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */,
+				0437EFEE205D377B0049B214 /* InjectionLocalDataSource.swift */,
+			);
+			path = Injections;
+			sourceTree = "<group>";
+		};
 		04639534205B516B00258597 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0437EFE1205D304D0049B214 /* Domain */,
 				04639535205B58C400258597 /* Home.storyboard */,
 				04639537205B58DD00258597 /* HomeViewController.swift */,
+				0437EFDD205D2F130049B214 /* HomeContract.swift */,
+				0437EFDF205D30020049B214 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -134,8 +210,11 @@
 			isa = PBXGroup;
 			children = (
 				04639546205B62E500258597 /* Modules */,
+				0437EFED205D37670049B214 /* Injections */,
+				0437EFDA205D2DBA0049B214 /* Entities */,
 				042F1506205B3EB000F57795 /* AppDelegate.swift */,
 				042F150F205B3EB000F57795 /* LaunchScreen.storyboard */,
+				0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -151,27 +230,28 @@
 		0463953C205B5F5200258597 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0463953D205B5F8600258597 /* DataManagers */,
+				0463953D205B5F8600258597 /* DataSource */,
 				04639543205B611E00258597 /* Enums */,
 				F4049B40205C049700434B9E /* IBDesignables */,
 				F4049B43205C0AA100434B9E /* Extension */,
 				04639541205B60CA00258597 /* BaseCallback.swift */,
+				0437EFD8205D27540049B214 /* RemoteUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0463953D205B5F8600258597 /* DataManagers */ = {
+		0463953D205B5F8600258597 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				0463953E205B5F9A00258597 /* Api */,
 			);
-			path = DataManagers;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		0463953E205B5F9A00258597 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				0463953F205B5FF300258597 /* ApiDataManager.swift */,
+				0463953F205B5FF300258597 /* ApiDataSource.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -215,6 +295,7 @@
 		F4049B39205BF39E00434B9E /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				0437EFE5205D34090049B214 /* Local */,
 				F4049B3A205BF3B200434B9E /* Remote */,
 			);
 			path = Infrastructure;
@@ -388,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -406,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */ = {
@@ -475,11 +556,22 @@
 			files = (
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
+				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
+				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
+				0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */,
+				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
+				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
 				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
 				F4049B45205C0AB900434B9E /* UIColor.swift in Sources */,
+				0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */,
+				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,
+				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
+				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,
+				0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */,
+				0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
-				04639540205B5FF300258597 /* ApiDataManager.swift in Sources */,
+				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 			);

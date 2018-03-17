@@ -12,15 +12,9 @@ class AuthenticateRemoteDataSourceImpl: AuthenticateRemoteDataSource {
     
     func authencticate(_ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
         
-        let parameters: Parameters = [
-            "nome"  : "Gabriel Rosa",
-            "email" : "vou@paraneon.com.br"
-        ]
-                
-        ApiDataManager.request(url: "URL", parameters: parameters, method: .get) { (callback) in
-            callback.onSuccess() { (jsonObject) in
-//                MAPPING JSON TO ENTITY
-                loadCallback(BaseCallback.success(jsonObject))
+        ApiDataSource.request(url: RemoteUtils.buildUrl(path: "GenerateToken"), parameters: RemoteUtils.buildAuthParameters(), method: .get) { (callback) in
+            callback.onSuccess() { (sessionToken) in
+                loadCallback(BaseCallback.success(sessionToken))
             }
             
             callback.onEmptyData {

@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public class ApiDataManager {
+public class ApiDataSource {
     
     public static func request(url: String, parameters: Parameters, method: HTTPMethod, _ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
         Alamofire.request(url, method: method, parameters: parameters)
