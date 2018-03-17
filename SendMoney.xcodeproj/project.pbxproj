@@ -143,13 +143,6 @@
 			path = SendMoneyTests;
 			sourceTree = "<group>";
 		};
-		0437EFDA205D2DBA0049B214 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		0437EFE1205D304D0049B214 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +204,6 @@
 			children = (
 				04639546205B62E500258597 /* Modules */,
 				0437EFED205D37670049B214 /* Injections */,
-				0437EFDA205D2DBA0049B214 /* Entities */,
 				042F1506205B3EB000F57795 /* AppDelegate.swift */,
 				042F150F205B3EB000F57795 /* LaunchScreen.storyboard */,
 				0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */,

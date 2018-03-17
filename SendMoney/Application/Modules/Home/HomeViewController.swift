@@ -23,9 +23,12 @@ class HomeViewController: UIViewController {
         
         showLoader()
         
-        
-        
         presenter.authenticateUser()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
