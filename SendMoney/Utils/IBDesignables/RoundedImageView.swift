@@ -44,7 +44,14 @@ class RoundedImageView: UIImageView {
         isInvalidButton = true
     }
     
-    func defaultRadius() {
-        layer.cornerRadius = self.frame.width/2
-    }
+    func defaultRadius() {                
+        if UIDevice.current.modelName == UIDevice.IPHONE_X_ID {
+            self.frame = CGRect(x: 102,
+                                y: 207,
+                                width: 170,
+                                height: 170)
+        }
+        
+        layer.cornerRadius = self.frame.height/2
+    }     
 }

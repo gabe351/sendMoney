@@ -23,6 +23,12 @@
 		0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF2205D38140049B214 /* InjectionUseCase.swift */; };
 		0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */; };
 		0437F001205D56140049B214 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F000205D56140049B214 /* RoundedImageView.swift */; };
+		0437F005205D5C3E0049B214 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */; };
+		0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F006205D5C480049B214 /* HistoryViewController.swift */; };
+		0437F009205D5C540049B214 /* SendMoney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F008205D5C540049B214 /* SendMoney.storyboard */; };
+		0437F00B205D5C5D0049B214 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F00A205D5C5D0049B214 /* History.storyboard */; };
+		0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00D205D8A270049B214 /* ConfigureViews.swift */; };
+		0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -33,7 +39,7 @@
 		F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */; };
 		F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */; };
 		F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */; };
-		F4049B45205C0AB900434B9E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B44205C0AB900434B9E /* UIColor.swift */; };
+		F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B44205C0AB900434B9E /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		0437EFF2205D38140049B214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
 		0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyApplication.swift; sourceTree = "<group>"; };
 		0437F000205D56140049B214 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
+		0437F006205D5C480049B214 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		0437F008205D5C540049B214 /* SendMoney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendMoney.storyboard; sourceTree = "<group>"; };
+		0437F00A205D5C5D0049B214 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		0437F00D205D8A270049B214 /* ConfigureViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViews.swift; sourceTree = "<group>"; };
+		0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -81,7 +93,7 @@
 		F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRemoteDataSource.swift; sourceTree = "<group>"; };
 		F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBlueButton.swift; sourceTree = "<group>"; };
-		F4049B44205C0AB900434B9E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F4049B44205C0AB900434B9E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,32 @@
 			path = Injections;
 			sourceTree = "<group>";
 		};
+		0437F002205D5C1F0049B214 /* SendMoney */ = {
+			isa = PBXGroup;
+			children = (
+				0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */,
+				0437F008205D5C540049B214 /* SendMoney.storyboard */,
+			);
+			path = SendMoney;
+			sourceTree = "<group>";
+		};
+		0437F003205D5C2C0049B214 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				0437F006205D5C480049B214 /* HistoryViewController.swift */,
+				0437F00A205D5C5D0049B214 /* History.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		0437F00C205D8A0E0049B214 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0437F00D205D8A270049B214 /* ConfigureViews.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04639534205B516B00258597 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +262,7 @@
 		0463953C205B5F5200258597 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0437F00C205D8A0E0049B214 /* View */,
 				0463953D205B5F8600258597 /* DataSource */,
 				04639543205B611E00258597 /* Enums */,
 				F4049B40205C049700434B9E /* IBDesignables */,
@@ -262,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				04639534205B516B00258597 /* Home */,
+				0437F002205D5C1F0049B214 /* SendMoney */,
+				0437F003205D5C2C0049B214 /* History */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -324,7 +365,8 @@
 		F4049B43205C0AA100434B9E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F4049B44205C0AB900434B9E /* UIColor.swift */,
+				F4049B44205C0AB900434B9E /* UIColorExtension.swift */,
+				0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -419,7 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */,
+				0437F009205D5C540049B214 /* SendMoney.storyboard in Resources */,
 				042F150E205B3EB000F57795 /* Assets.xcassets in Resources */,
+				0437F00B205D5C5D0049B214 /* History.storyboard in Resources */,
 				04639536205B58C400258597 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +593,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
+				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
@@ -558,13 +604,15 @@
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
 				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
-				F4049B45205C0AB900434B9E /* UIColor.swift in Sources */,
+				F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */,
 				0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */,
+				0437F005205D5C3E0049B214 /* SendMoneyViewController.swift in Sources */,
 				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,
 				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
 				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,
 				0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */,
 				0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */,
+				0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,

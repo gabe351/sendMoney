@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="bSi-6p-ERe">
             <objects>
-                <viewController id="pJG-j4-SeA" customClass="HomeViewController" customModule="SendMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeId" id="pJG-j4-SeA" customClass="HomeViewController" customModule="SendMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1D-Lp-rzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

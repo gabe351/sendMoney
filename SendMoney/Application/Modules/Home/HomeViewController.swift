@@ -11,6 +11,9 @@ import Alamofire
 
 class HomeViewController: UIViewController {
     
+    public static let NIB_NAME = "Home"
+    public static let ID       = "HomeId"
+    
     @IBOutlet weak var userImage: RoundedImageView!
     
     lazy var presenter: HomePresenterContract = {
@@ -22,23 +25,33 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showLoader()
+        configureView()
         
         presenter.authenticateUser()
-        
     }
     
     
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
-        print("Send money")
+        let storyboard = UIStoryboard(name: SendMoneyViewController.NIB_NAME, bundle: nil)
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: SendMoneyViewController.ID)
+            as! SendMoneyViewController
+        
+        self.present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func historyDidPressed(_ sender: Any) {
-        print("History")
+        let storyboard = UIStoryboard(name: HistoryViewController.NIB_NAME, bundle: nil)
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: HistoryViewController.ID)
+            as! HistoryViewController
+        
+        self.present(viewController, animated: true, completion: nil)
     }
     
     private func configureView() {
         userImage.defaultRadius()
+        showLoader()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
