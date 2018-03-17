@@ -10,7 +10,7 @@ protocol SessionLocalDataSource {
     
     func save(token: String)
     
-    func getToken() -> String
+    func getToken() -> String?
     
     func destroy()
     

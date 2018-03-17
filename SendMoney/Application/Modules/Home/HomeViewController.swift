@@ -21,7 +21,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.authenticateUser()
+        
+        if SendMoneyApplication.getCurrentToken() == nil {
+            presenter.authenticateUser()
+        }
     }
 }
 

@@ -36,8 +36,8 @@ public class SessionLocalDataSourceImpl: SessionLocalDataSource {
         defaultsDao.set(token, forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)
     }
     
-    func getToken() -> String {
-        return defaultsDao.string(forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)!
+    func getToken() -> String? {
+        return defaultsDao.string(forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)
     }
     
     public func destroy() {

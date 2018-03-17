@@ -10,7 +10,7 @@ import Foundation
 
 class SendMoneyApplication {
     
-    static func getCurrentToken() -> String {
+    static func getCurrentToken() -> String? {
         return InjectionLocalDataSource.provideSessionLocalDataSource().getToken()
     }
 }
