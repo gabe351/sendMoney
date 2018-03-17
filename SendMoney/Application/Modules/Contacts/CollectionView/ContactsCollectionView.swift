@@ -34,7 +34,8 @@ class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize: CGRect = UIScreen.main.bounds
+        
         return CGSize(width: screenSize.width,
-                      height: screenSize.height/7)
+                      height: 80)
     }
 }

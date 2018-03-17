@@ -23,9 +23,9 @@
 		0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF2205D38140049B214 /* InjectionUseCase.swift */; };
 		0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */; };
 		0437F001205D56140049B214 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F000205D56140049B214 /* RoundedImageView.swift */; };
-		0437F005205D5C3E0049B214 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */; };
+		0437F005205D5C3E0049B214 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F004205D5C3E0049B214 /* ContactsViewController.swift */; };
 		0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F006205D5C480049B214 /* HistoryViewController.swift */; };
-		0437F009205D5C540049B214 /* SendMoney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F008205D5C540049B214 /* SendMoney.storyboard */; };
+		0437F009205D5C540049B214 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F008205D5C540049B214 /* Contacts.storyboard */; };
 		0437F00B205D5C5D0049B214 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F00A205D5C5D0049B214 /* History.storyboard */; };
 		0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00D205D8A270049B214 /* ConfigureViews.swift */; };
 		0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */; };
@@ -83,9 +83,9 @@
 		0437EFF2205D38140049B214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
 		0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyApplication.swift; sourceTree = "<group>"; };
 		0437F000205D56140049B214 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
+		0437F004205D5C3E0049B214 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		0437F006205D5C480049B214 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		0437F008205D5C540049B214 /* SendMoney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendMoney.storyboard; sourceTree = "<group>"; };
+		0437F008205D5C540049B214 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		0437F00A205D5C5D0049B214 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		0437F00D205D8A270049B214 /* ConfigureViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViews.swift; sourceTree = "<group>"; };
 		0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
@@ -221,14 +221,15 @@
 			path = Injections;
 			sourceTree = "<group>";
 		};
-		0437F002205D5C1F0049B214 /* SendMoney */ = {
+		0437F002205D5C1F0049B214 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				0437F02F205DD4C00049B214 /* SendMoneyDialog */,
 				0437F027205DCA2F0049B214 /* CollectionView */,
-				0437F004205D5C3E0049B214 /* SendMoneyViewController.swift */,
-				0437F008205D5C540049B214 /* SendMoney.storyboard */,
+				0437F004205D5C3E0049B214 /* ContactsViewController.swift */,
+				0437F008205D5C540049B214 /* Contacts.storyboard */,
 			);
-			path = SendMoney;
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		0437F003205D5C2C0049B214 /* History */ = {
@@ -291,6 +292,13 @@
 				0437F02D205DCC0F0049B214 /* ContactCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0437F02F205DD4C00049B214 /* SendMoneyDialog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SendMoneyDialog;
 			sourceTree = "<group>";
 		};
 		04639534205B516B00258597 /* Home */ = {
@@ -369,7 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				04639534205B516B00258597 /* Home */,
-				0437F002205D5C1F0049B214 /* SendMoney */,
+				0437F002205D5C1F0049B214 /* Contacts */,
 				0437F003205D5C2C0049B214 /* History */,
 				0437F014205DB0240049B214 /* CustomUIAlert */,
 			);
@@ -531,7 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */,
-				0437F009205D5C540049B214 /* SendMoney.storyboard in Resources */,
+				0437F009205D5C540049B214 /* Contacts.storyboard in Resources */,
 				042F150E205B3EB000F57795 /* Assets.xcassets in Resources */,
 				0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */,
 				0437F00B205D5C5D0049B214 /* History.storyboard in Resources */,
@@ -683,7 +691,7 @@
 				F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */,
 				0437F017205DB0680049B214 /* CustomUIAlertViewController.swift in Sources */,
 				0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */,
-				0437F005205D5C3E0049B214 /* SendMoneyViewController.swift in Sources */,
+				0437F005205D5C3E0049B214 /* ContactsViewController.swift in Sources */,
 				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,
 				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
 				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,

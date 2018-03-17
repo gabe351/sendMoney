@@ -34,24 +34,26 @@ class HomeViewController: UIViewController {
     
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
         if SendMoneyApplication.getCurrentToken() == nil {
-            let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
-            customAlert.delegate = self
-            self.present(customAlert, animated: true, completion: nil)
+            showCustomAlert()
         } else {
-            let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+            let viewController = UIStoryboard.loadViewController() as ContactsViewController
             self.present(viewController, animated: true, completion: nil)
         }
     }
     
     @IBAction func historyDidPressed(_ sender: Any) {
         if SendMoneyApplication.getCurrentToken() == nil {
-            let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
-            customAlert.delegate = self
-            self.present(customAlert, animated: true, completion: nil)
+            showCustomAlert()
         } else {
             let viewController = UIStoryboard.loadViewController() as HistoryViewController
             self.present(viewController, animated: true, completion: nil)
         }
+    }
+    
+    private func showCustomAlert() {
+        let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
+        customAlert.delegate = self
+        self.present(customAlert, animated: true, completion: nil)
     }
     
     private func configureView() {

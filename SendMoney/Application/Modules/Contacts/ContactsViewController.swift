@@ -1,5 +1,5 @@
 //
-//  SendMoneyViewController.swift
+//  ContactsViewController.swift
 //  SendMoney
 //
 //  Created by Gabriel Rosa on 17/03/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class SendMoneyViewController: UIViewController {
+public class ContactsViewController: UIViewController {
     
-    public static let NIB_NAME = "SendMoney"
-    public static let ID       = "SendMoneyId"
+    public static let NIB_NAME = "Contacts"
+    public static let ID       = "ContactsId"
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var contactsCollectionView: ContactsCollectionView!
@@ -38,7 +38,7 @@ public class SendMoneyViewController: UIViewController {
 }
 
 //MARK StoryboardLoadable implementation
-extension SendMoneyViewController: StoryboardLoadable {
+extension ContactsViewController: StoryboardLoadable {
     
     static func storyboardName() -> String {
         return NIB_NAME
