@@ -17,6 +17,8 @@ class CustomUIAlertViewController: UIViewController {
     public static let NIB_NAME = "CustomUIAlert"
     public static let ID       = "CustomUIAlertId"
     
+    var delegate: CustomAlertDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,7 @@ class CustomUIAlertViewController: UIViewController {
     }
     
     @IBAction func buttonDidPressed(_ sender: Any) {
+        delegate?.buttonDidPressed()
         self.dismiss(animated: true, completion: nil)
     }    
 }

@@ -34,6 +34,8 @@
 		0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0437F018205DB08B0049B214 /* CustomUIAlert.xib */; };
 		0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F01A205DB28B0049B214 /* RoundedView.swift */; };
 		0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */; };
+		0437F024205DBEC90049B214 /* CustomAlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F023205DBEC90049B214 /* CustomAlertDelegate.swift */; };
+		0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F025205DBEF70049B214 /* HomeCustomAlertDelegate.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -89,6 +91,8 @@
 		0437F018205DB08B0049B214 /* CustomUIAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomUIAlert.xib; sourceTree = "<group>"; };
 		0437F01A205DB28B0049B214 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboardLoadable.swift; sourceTree = "<group>"; };
+		0437F023205DBEC90049B214 /* CustomAlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertDelegate.swift; sourceTree = "<group>"; };
+		0437F025205DBEF70049B214 /* HomeCustomAlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomAlertDelegate.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 			children = (
 				0437F016205DB0680049B214 /* CustomUIAlertViewController.swift */,
 				0437F018205DB08B0049B214 /* CustomUIAlert.xib */,
+				0437F023205DBEC90049B214 /* CustomAlertDelegate.swift */,
 			);
 			path = CustomUIAlert;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */,
+				0437F025205DBEF70049B214 /* HomeCustomAlertDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */,
 				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
+				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
@@ -659,6 +666,7 @@
 				0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
+				0437F024205DBEC90049B214 /* CustomAlertDelegate.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 				0437F001205D56140049B214 /* RoundedImageView.swift in Sources */,

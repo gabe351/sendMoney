@@ -33,19 +33,25 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
-        
-        let viewController: CustomUIAlertViewController = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)!
-        
-//        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
-//
-        self.present(viewController, animated: true, completion: nil)
+        if SendMoneyApplication.getCurrentToken() == nil {
+            let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
+            customAlert.delegate = self
+            self.present(customAlert, animated: true, completion: nil)
+        } else {
+            let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func historyDidPressed(_ sender: Any) {
-        
-        let viewController = UIStoryboard.loadViewController() as HistoryViewController
-        
-        self.present(viewController, animated: true, completion: nil)
+        if SendMoneyApplication.getCurrentToken() == nil {
+            let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
+            customAlert.delegate = self
+            self.present(customAlert, animated: true, completion: nil)
+        } else {
+            let viewController = UIStoryboard.loadViewController() as HistoryViewController            
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     private func configureView() {
@@ -82,6 +88,7 @@ extension HomeViewController: HomeViewContract {
     func showLoader() {
         UIView.animate(withDuration: 0.5) {
             self.authActivityIndicator.isHidden = false
+            self.noAuthenticationIcon.isHidden  = true
         }
     }
     
@@ -89,9 +96,5 @@ extension HomeViewController: HomeViewContract {
         UIView.animate(withDuration: 0.5) {
             self.authActivityIndicator.isHidden = true
         }
-    }
-    
-    func showUnauthorizedView() {
-        
     }
 }

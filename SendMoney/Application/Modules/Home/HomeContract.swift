@@ -13,9 +13,7 @@ protocol HomeViewContract {
     func hideAtuhIconError()
     
     func showLoader()
-    func hideLoader()
-    
-    func showUnauthorizedView()    
+    func hideLoader()        
 }
 
 protocol HomePresenterContract {
