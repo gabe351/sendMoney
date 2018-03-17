@@ -21,10 +21,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoader()
         
-        if SendMoneyApplication.getCurrentToken() == nil {
-            presenter.authenticateUser()
-        }
+        
+        
+        presenter.authenticateUser()
     }
 }
 
@@ -33,11 +34,12 @@ extension HomeViewController: HomeViewContract {
     
     func showAuthIconSuccess() {
         print("aaa")
-        
+        hideLoader()
     }
     
     func showAtuhIconError() {
         print("aaa")
+        hideLoader()
     }
     
     func showLoader() {
@@ -46,5 +48,13 @@ extension HomeViewController: HomeViewContract {
     
     func hideLoader() {
         print("aaa")
+    }
+    
+    func showUnauthorizedLoader() {
+        
+    }
+    
+    func hideUnauthorizedLoader() {
+        
     }
 }

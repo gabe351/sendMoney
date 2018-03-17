@@ -15,6 +15,8 @@ protocol HomeViewContract {
     func showLoader()
     func hideLoader()
     
+    func showUnauthorizedLoader()
+    func hideUnauthorizedLoader()
 }
 
 protocol HomePresenterContract {
