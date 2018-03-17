@@ -30,6 +30,10 @@
 		0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00D205D8A270049B214 /* ConfigureViews.swift */; };
 		0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */; };
 		0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F012205D9F9E0049B214 /* StoryboardLoadable.swift */; };
+		0437F017205DB0680049B214 /* CustomUIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F016205DB0680049B214 /* CustomUIAlertViewController.swift */; };
+		0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0437F018205DB08B0049B214 /* CustomUIAlert.xib */; };
+		0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F01A205DB28B0049B214 /* RoundedView.swift */; };
+		0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -81,6 +85,10 @@
 		0437F00D205D8A270049B214 /* ConfigureViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViews.swift; sourceTree = "<group>"; };
 		0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		0437F012205D9F9E0049B214 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		0437F016205DB0680049B214 /* CustomUIAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIAlertViewController.swift; sourceTree = "<group>"; };
+		0437F018205DB08B0049B214 /* CustomUIAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomUIAlert.xib; sourceTree = "<group>"; };
+		0437F01A205DB28B0049B214 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboardLoadable.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -237,9 +245,27 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		0437F014205DB0240049B214 /* CustomUIAlert */ = {
+			isa = PBXGroup;
+			children = (
+				0437F016205DB0680049B214 /* CustomUIAlertViewController.swift */,
+				0437F018205DB08B0049B214 /* CustomUIAlert.xib */,
+			);
+			path = CustomUIAlert;
+			sourceTree = "<group>";
+		};
+		0437F01E205DB89F0049B214 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0437F01F205DB8B60049B214 /* HomeStoryboardLoadable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		04639534205B516B00258597 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0437F01E205DB89F0049B214 /* Extensions */,
 				0437EFE1205D304D0049B214 /* Domain */,
 				04639535205B58C400258597 /* Home.storyboard */,
 				04639537205B58DD00258597 /* HomeViewController.swift */,
@@ -314,6 +340,7 @@
 				04639534205B516B00258597 /* Home */,
 				0437F002205D5C1F0049B214 /* SendMoney */,
 				0437F003205D5C2C0049B214 /* History */,
+				0437F014205DB0240049B214 /* CustomUIAlert */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -369,6 +396,7 @@
 			children = (
 				F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */,
 				0437F000205D56140049B214 /* RoundedImageView.swift */,
+				0437F01A205DB28B0049B214 /* RoundedView.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -474,6 +502,7 @@
 				042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */,
 				0437F009205D5C540049B214 /* SendMoney.storyboard in Resources */,
 				042F150E205B3EB000F57795 /* Assets.xcassets in Resources */,
+				0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */,
 				0437F00B205D5C5D0049B214 /* History.storyboard in Resources */,
 				04639536205B58C400258597 /* Home.storyboard in Resources */,
 			);
@@ -605,6 +634,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */,
+				0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */,
+				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
@@ -616,6 +647,7 @@
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
 				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
 				F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */,
+				0437F017205DB0680049B214 /* CustomUIAlertViewController.swift in Sources */,
 				0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */,
 				0437F005205D5C3E0049B214 /* SendMoneyViewController.swift in Sources */,
 				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,

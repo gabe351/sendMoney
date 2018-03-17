@@ -30,14 +30,14 @@ class HomeViewController: UIViewController {
         configureView()
         
         presenter.authenticateUser()
-        
-        
     }
     
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
         
-        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+        let viewController: CustomUIAlertViewController = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)!
         
+//        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+//
         self.present(viewController, animated: true, completion: nil)
     }
     
@@ -61,18 +61,6 @@ class HomeViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-}
-
-//MARK StoryboardLoadable implementation
-extension HomeViewController: StoryboardLoadable {
-    
-    static func storyboardName() -> String {
-        return NIB_NAME
-    }
-    
-    static func storyboardIdentifier() -> String {
-        return ID
     }
 }
 
