@@ -31,5 +31,18 @@ public class SendMoneyViewController: UIViewController {
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }        
+}
+
+//MARK StoryboardLoadable implementation
+extension SendMoneyViewController: StoryboardLoadable {
+    
+    static func storyboardName() -> String {
+        return NIB_NAME
+    }
+    
+    static func storyboardIdentifier() -> String {
+        return ID
     }
 }
+

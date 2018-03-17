@@ -29,6 +29,7 @@
 		0437F00B205D5C5D0049B214 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F00A205D5C5D0049B214 /* History.storyboard */; };
 		0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00D205D8A270049B214 /* ConfigureViews.swift */; };
 		0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */; };
+		0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F012205D9F9E0049B214 /* StoryboardLoadable.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -79,6 +80,7 @@
 		0437F00A205D5C5D0049B214 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		0437F00D205D8A270049B214 /* ConfigureViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViews.swift; sourceTree = "<group>"; };
 		0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		0437F012205D9F9E0049B214 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0437F011205D9F8D0049B214 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0437F012205D9F9E0049B214 /* StoryboardLoadable.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		04639534205B516B00258597 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +272,7 @@
 		0463953C205B5F5200258597 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0437F011205D9F8D0049B214 /* protocols */,
 				0437F00C205D8A0E0049B214 /* View */,
 				0463953D205B5F8600258597 /* DataSource */,
 				04639543205B611E00258597 /* Enums */,
@@ -613,6 +624,7 @@
 				0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */,
 				0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */,
 				0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */,
+				0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,

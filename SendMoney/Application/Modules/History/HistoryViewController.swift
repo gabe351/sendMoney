@@ -33,3 +33,16 @@ public class HistoryViewController: UIViewController {
         return .lightContent
     }        
 }
+
+//MARK StoryboardLoadable implementation
+extension HistoryViewController: StoryboardLoadable {
+    
+    static func storyboardName() -> String {
+        return NIB_NAME
+    }
+    
+    static func storyboardIdentifier() -> String {
+        return ID
+    }
+}
+

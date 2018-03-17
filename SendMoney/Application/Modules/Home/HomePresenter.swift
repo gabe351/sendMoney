@@ -21,19 +21,21 @@ class HomePresenter: HomePresenterContract {
     }
     
     func authenticateUser() {
+        self.view.showLoader()
         if SendMoneyApplication.getCurrentToken() != nil {
-            self.view.showAuthIconSuccess()
+            self.view.hideLoader()
             return
         }
         
         getAuth.authenticate { (useCaseCallback) in
             useCaseCallback.onSuccess() { (token) in
                 self.saveSessionToken.save(token as! String)
-                self.view.showAuthIconSuccess()
-                self.view.hideUnauthorizedLoader()
+                self.view.hideLoader()
+                self.view.hideAtuhIconError()                
             }
             
             useCaseCallback.onFailed() { (error) in
+                self.view.hideLoader()
                 self.view.showAtuhIconError()
             }
         }

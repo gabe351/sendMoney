@@ -9,14 +9,13 @@
 import Foundation
 
 protocol HomeViewContract {
-    func showAuthIconSuccess()
     func showAtuhIconError()
+    func hideAtuhIconError()
     
     func showLoader()
     func hideLoader()
     
-    func showUnauthorizedLoader()
-    func hideUnauthorizedLoader()
+    func showUnauthorizedView()    
 }
 
 protocol HomePresenterContract {

@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
     public static let ID       = "HomeId"
     
     @IBOutlet weak var userImage: RoundedImageView!
-    
+    @IBOutlet weak var authActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noAuthenticationIcon: UIImageView!
+        
     lazy var presenter: HomePresenterContract = {
         return HomePresenter(view: self,
                              getAuth: InjectionUseCase.provideGetAuth(),
@@ -28,30 +30,33 @@ class HomeViewController: UIViewController {
         configureView()
         
         presenter.authenticateUser()
+        
+        
     }
     
-    
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: SendMoneyViewController.NIB_NAME, bundle: nil)
         
-        let viewController = storyboard.instantiateViewController(withIdentifier: SendMoneyViewController.ID)
-            as! SendMoneyViewController
+        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
         
         self.present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func historyDidPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: HistoryViewController.NIB_NAME, bundle: nil)
         
-        let viewController = storyboard.instantiateViewController(withIdentifier: HistoryViewController.ID)
-            as! HistoryViewController
+        let viewController = UIStoryboard.loadViewController() as HistoryViewController
         
         self.present(viewController, animated: true, completion: nil)
     }
     
     private func configureView() {
         userImage.defaultRadius()
-        showLoader()
+        authActivityIndicator.backgroundColor = UIColor.lightBlue
+        setupNoAuthenticationIcon()
+    }
+    
+    private func setupNoAuthenticationIcon() {
+        noAuthenticationIcon.image = UIImage(named: "noAuthenticationIcon")?
+            .withRenderingMode(.alwaysTemplate)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -59,32 +64,46 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK StoryboardLoadable implementation
+extension HomeViewController: StoryboardLoadable {
+    
+    static func storyboardName() -> String {
+        return NIB_NAME
+    }
+    
+    static func storyboardIdentifier() -> String {
+        return ID
+    }
+}
+
 //MARK: View contract implementation
 extension HomeViewController: HomeViewContract {
     
-    func showAuthIconSuccess() {
-        print("aaa")
-        hideLoader()
+    func showAtuhIconError() {
+        UIView.animate(withDuration: 0.5) {
+            self.noAuthenticationIcon.isHidden = false
+        }
     }
     
-    func showAtuhIconError() {
-        print("aaa")
-        hideLoader()
+    func hideAtuhIconError() {
+        UIView.animate(withDuration: 0.5) {
+            self.noAuthenticationIcon.isHidden = true
+        }
     }
     
     func showLoader() {
-        print("aaa")
+        UIView.animate(withDuration: 0.5) {
+            self.authActivityIndicator.isHidden = false
+        }
     }
     
     func hideLoader() {
-        print("aaa")
+        UIView.animate(withDuration: 0.5) {
+            self.authActivityIndicator.isHidden = true
+        }
     }
     
-    func showUnauthorizedLoader() {
-        
-    }
-    
-    func hideUnauthorizedLoader() {
+    func showUnauthorizedView() {
         
     }
 }
