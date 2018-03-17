@@ -14,11 +14,14 @@ public class SendMoneyViewController: UIViewController {
     public static let ID       = "SendMoneyId"
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var contactsCollectionView: ContactsCollectionView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         configureView()
+        contactsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+
     }
     
     @IBAction func BackDidPressed(_ sender: Any) {

@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
             customAlert.delegate = self
             self.present(customAlert, animated: true, completion: nil)
         } else {
-            let viewController = UIStoryboard.loadViewController() as HistoryViewController            
+            let viewController = UIStoryboard.loadViewController() as HistoryViewController
             self.present(viewController, animated: true, completion: nil)
         }
     }
