@@ -22,6 +22,7 @@
 		0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */; };
 		0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF2205D38140049B214 /* InjectionUseCase.swift */; };
 		0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */; };
+		0437F001205D56140049B214 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F000205D56140049B214 /* RoundedImageView.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -65,6 +66,7 @@
 		0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionRemoteDataSource.swift; sourceTree = "<group>"; };
 		0437EFF2205D38140049B214 /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
 		0437EFF4205D397E0049B214 /* SendMoneyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyApplication.swift; sourceTree = "<group>"; };
+		0437F000205D56140049B214 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */,
+				0437F000205D56140049B214 /* RoundedImageView.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
+				0437F001205D56140049B214 /* RoundedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

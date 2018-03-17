@@ -11,6 +11,7 @@ import Alamofire
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var userImage: RoundedImageView!
     
     lazy var presenter: HomePresenterContract = {
         return HomePresenter(view: self,
@@ -25,6 +26,19 @@ class HomeViewController: UIViewController {
         
         presenter.authenticateUser()
         
+    }
+    
+    
+    @IBAction func sendMoneyDidPressed(_ sender: Any) {
+        print("Send money")
+    }
+    
+    @IBAction func historyDidPressed(_ sender: Any) {
+        print("History")
+    }
+    
+    private func configureView() {
+        userImage.defaultRadius()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
