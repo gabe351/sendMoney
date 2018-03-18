@@ -65,6 +65,7 @@
 		F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */; };
 		F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */; };
 		F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B44205C0AB900434B9E /* UIColorExtension.swift */; };
+		F4C436EE205ED7FF008C6EC9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436ED205ED7FF008C6EC9 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		F4049B3E205BFBF800434B9E /* AuthenticateRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRemoteDataSource.swift; sourceTree = "<group>"; };
 		F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBlueButton.swift; sourceTree = "<group>"; };
 		F4049B44205C0AB900434B9E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		F4C436ED205ED7FF008C6EC9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +538,7 @@
 				F4049B41205C04BA00434B9E /* RoundedBlueButton.swift */,
 				0437F000205D56140049B214 /* RoundedImageView.swift */,
 				0437F01A205DB28B0049B214 /* RoundedView.swift */,
+				F4C436ED205ED7FF008C6EC9 /* GradientView.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -693,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -711,7 +714,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */ = {
@@ -795,6 +798,7 @@
 				0437F036205E020C0049B214 /* ContactsContract.swift in Sources */,
 				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
 				0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */,
+				F4C436EE205ED7FF008C6EC9 /* GradientView.swift in Sources */,
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
 				0437F053205EB7250049B214 /* HistoryDetailCell.swift in Sources */,

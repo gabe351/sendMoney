@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         
         configureView()
         
-        presenter.authenticateUser()
+        presenter.authenticateUser()                
     }
     
     @IBAction func sendMoneyDidPressed(_ sender: Any) {
@@ -79,7 +79,6 @@ extension HomeViewController: HomeViewContract {
         UIView.animate(withDuration: 0.5) {
             self.noAuthenticationIcon.isHidden = false
         }
-        SendMoneyApplication.destroyToken()
     }
     
     func hideAtuhIconError() {
