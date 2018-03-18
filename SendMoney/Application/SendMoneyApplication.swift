@@ -13,4 +13,8 @@ class SendMoneyApplication {
     static func getCurrentToken() -> String? {
         return InjectionLocalDataSource.provideSessionLocalDataSource().getToken()
     }
+    
+    static func destroyToken() {
+        InjectionLocalDataSource.provideSessionLocalDataSource().destroy()
+    }
 }
