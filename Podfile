@@ -7,6 +7,7 @@ target 'SendMoney' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON'
   pod 'UIColor_Hex_Swift', '~> 4.0.1'
+  pod 'RealmSwift', '~> 2.10.1'
 
   target 'SendMoneyTests' do
     inherit! :search_paths
