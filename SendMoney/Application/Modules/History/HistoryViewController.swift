@@ -17,6 +17,7 @@ public class HistoryViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var emptyDataTitle: UILabel!
     @IBOutlet weak var emptyDataContentView: UIView!
+    @IBOutlet weak var historyCollectionView: HistoryCollectionView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,20 @@ public class HistoryViewController: UIViewController {
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
         refreshButton.setImage(configureRefreshIconImage().image, for: .normal)
+        historyCollectionView.parentView = self
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }        
+}
+
+extension HistoryViewController: HistoryViewContract {
+    
+    func goToHistoryDetail() {
+        let viewController = UIStoryboard.loadViewController() as HistoryDetailViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
 }
 
 //MARK StoryboardLoadable implementation

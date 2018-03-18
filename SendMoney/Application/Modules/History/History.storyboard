@@ -91,6 +91,7 @@
                         <outlet property="backButton" destination="D1p-I7-iFz" id="H4t-H6-iBq"/>
                         <outlet property="emptyDataContentView" destination="BVD-P8-nIV" id="H1k-M4-SHQ"/>
                         <outlet property="emptyDataTitle" destination="aNk-sR-Yx2" id="8Mp-uD-6Mi"/>
+                        <outlet property="historyCollectionView" destination="EfT-tb-CFS" id="3Zl-tY-StU"/>
                         <outlet property="refreshButton" destination="ZRA-KK-UdE" id="i26-SR-JWL"/>
                     </connections>
                 </viewController>

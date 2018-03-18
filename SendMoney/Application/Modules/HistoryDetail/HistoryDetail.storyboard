@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--History Detail View Controller-->
         <scene sceneID="IZr-VH-g6i">
             <objects>
-                <viewController id="BB2-2x-7Ay" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailId" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="BB2-2x-7Ay" customClass="HistoryDetailViewController" customModule="SendMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGT-eC-CQ5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAC-Ux-JQv">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAC-Ux-JQv" userLabel="close button">
                                         <rect key="frame" x="19" y="19" width="15" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="closetwowhite"/>
+                                        <connections>
+                                            <action selector="closeButtonDidPressed:" destination="BB2-2x-7Ay" eventType="touchUpInside" id="T4u-Ze-UUs"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gabriel Rosa do Nascimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb1-VU-z2p">
                                         <rect key="frame" x="20" y="79" width="227" height="20"/>
@@ -61,8 +64,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ldv-wl-acz">
-                                        <rect key="frame" x="15" y="127" width="240" height="155"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ldv-wl-acz" customClass="HistoryDetailCollectionView" customModule="SendMoney" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="127" width="240" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hpY-AU-VfR">
@@ -82,9 +85,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8lT-BK-Xfj"/>
                     </view>
+                    <connections>
+                        <outlet property="contactImageView" destination="tCX-yX-Lki" id="eZv-EN-YSC"/>
+                        <outlet property="contactNameLabel" destination="Pb1-VU-z2p" id="Xxp-VG-gDE"/>
+                        <outlet property="contactPhoneNumberLabel" destination="fE5-J2-3dh" id="j8H-Zh-dgs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdT-wY-wXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

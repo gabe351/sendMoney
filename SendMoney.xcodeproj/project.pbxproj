@@ -50,6 +50,10 @@
 		0437F047205E9E150049B214 /* HistoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F046205E9E150049B214 /* HistoryDetail.storyboard */; };
 		0437F04B205EB5080049B214 /* ContactHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F04A205EB5080049B214 /* ContactHistoryCell.swift */; };
 		0437F04D205EB5730049B214 /* ContactHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0437F04C205EB5730049B214 /* ContactHistoryCell.xib */; };
+		0437F050205EB6EE0049B214 /* HistoryDetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F04F205EB6EE0049B214 /* HistoryDetailCollectionView.swift */; };
+		0437F053205EB7250049B214 /* HistoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F052205EB7250049B214 /* HistoryDetailCell.swift */; };
+		0437F055205EB75F0049B214 /* HistoryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0437F054205EB75F0049B214 /* HistoryDetailCell.xib */; };
+		0437F057205EBB0F0049B214 /* HistoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F056205EBB0F0049B214 /* HistoryContract.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -121,6 +125,10 @@
 		0437F046205E9E150049B214 /* HistoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryDetail.storyboard; sourceTree = "<group>"; };
 		0437F04A205EB5080049B214 /* ContactHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHistoryCell.swift; sourceTree = "<group>"; };
 		0437F04C205EB5730049B214 /* ContactHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactHistoryCell.xib; sourceTree = "<group>"; };
+		0437F04F205EB6EE0049B214 /* HistoryDetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionView.swift; sourceTree = "<group>"; };
+		0437F052205EB7250049B214 /* HistoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCell.swift; sourceTree = "<group>"; };
+		0437F054205EB75F0049B214 /* HistoryDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailCell.xib; sourceTree = "<group>"; };
+		0437F056205EBB0F0049B214 /* HistoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContract.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 				0437F03E205E9A6B0049B214 /* CollectionView */,
 				0437F006205D5C480049B214 /* HistoryViewController.swift */,
 				0437F00A205D5C5D0049B214 /* History.storyboard */,
+				0437F056205EBB0F0049B214 /* HistoryContract.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 		0437F043205E9DCD0049B214 /* HistoryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0437F04E205EB6DE0049B214 /* CollectionView */,
 				0437F044205E9E010049B214 /* HistoryDetailViewController.swift */,
 				0437F046205E9E150049B214 /* HistoryDetail.storyboard */,
 			);
@@ -367,6 +377,24 @@
 			children = (
 				0437F04A205EB5080049B214 /* ContactHistoryCell.swift */,
 				0437F04C205EB5730049B214 /* ContactHistoryCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0437F04E205EB6DE0049B214 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0437F051205EB71B0049B214 /* Cell */,
+				0437F04F205EB6EE0049B214 /* HistoryDetailCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		0437F051205EB71B0049B214 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0437F052205EB7250049B214 /* HistoryDetailCell.swift */,
+				0437F054205EB75F0049B214 /* HistoryDetailCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -614,6 +642,7 @@
 				042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */,
 				0437F009205D5C540049B214 /* Contacts.storyboard in Resources */,
 				0437F047205E9E150049B214 /* HistoryDetail.storyboard in Resources */,
+				0437F055205EB75F0049B214 /* HistoryDetailCell.xib in Resources */,
 				042F150E205B3EB000F57795 /* Assets.xcassets in Resources */,
 				0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */,
 				0437F04D205EB5730049B214 /* ContactHistoryCell.xib in Resources */,
@@ -757,15 +786,18 @@
 				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				0437F02C205DCBD40049B214 /* ContactCell.swift in Sources */,
+				0437F057205EBB0F0049B214 /* HistoryContract.swift in Sources */,
 				0437F03D205E057F0049B214 /* TransferRequest.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
+				0437F050205EB6EE0049B214 /* HistoryDetailCollectionView.swift in Sources */,
 				0437F036205E020C0049B214 /* ContactsContract.swift in Sources */,
 				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
 				0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */,
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
+				0437F053205EB7250049B214 /* HistoryDetailCell.swift in Sources */,
 				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
 				F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */,
 				0437F017205DB0680049B214 /* CustomUIAlertViewController.swift in Sources */,
