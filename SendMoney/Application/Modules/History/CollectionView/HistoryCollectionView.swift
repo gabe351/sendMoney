@@ -1,23 +1,21 @@
 //
-//  ContactsCollectionView.swift
+//  HistoryCollectionView.swift
 //  SendMoney
 //
-//  Created by Gabriel Rosa on 17/03/18.
+//  Created by Gabriel Rosa on 18/03/18.
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
 import UIKit
 
-class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-        
-    var parentView: ContactsViewContract?
+class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         let contactCell = UINib(nibName: ContactCell.NIB_NAME, bundle: nil)
         self.register(contactCell, forCellWithReuseIdentifier: ContactCell.ID)
-     
+        
         self.backgroundColor = UIColor.clear.withAlphaComponent(0)
         
         self.delegate   = self
@@ -35,7 +33,7 @@ class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        parentView?.openSendMoneyDialog()        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -47,3 +45,4 @@ class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
                       height: 80)
     }
 }
+

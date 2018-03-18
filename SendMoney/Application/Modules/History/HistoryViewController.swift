@@ -14,6 +14,9 @@ public class HistoryViewController: UIViewController {
     public static let ID       = "HisotryId"
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var emptyDataTitle: UILabel!
+    @IBOutlet weak var emptyDataContentView: UIView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +28,13 @@ public class HistoryViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func refreshButtonDidPressed(_ sender: Any) {
+        
+    }
+    
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
+        refreshButton.setImage(configureRefreshIconImage().image, for: .normal)
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {

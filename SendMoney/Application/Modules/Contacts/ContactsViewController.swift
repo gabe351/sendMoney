@@ -34,7 +34,7 @@ public class ContactsViewController: UIViewController {
     
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
-        contactsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {

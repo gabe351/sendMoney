@@ -20,3 +20,11 @@ func configureBackButtonImage() -> UIImageView {
     return backArrowImageView
 }
 
+func configureRefreshIconImage() -> UIImageView {
+    let refreshIconImageView = UIImageView()
+    refreshIconImageView.image = UIImage(named: "refresh")?
+        .withRenderingMode(.alwaysTemplate)
+    
+    return refreshIconImageView
+}
+
