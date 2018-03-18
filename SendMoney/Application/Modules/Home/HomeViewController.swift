@@ -58,7 +58,7 @@ class HomeViewController: UIViewController {
     
     private func configureView() {
         userImage.defaultRadius()
-        authActivityIndicator.backgroundColor = UIColor.lightBlue
+        authActivityIndicator.color = UIColor.lightBlue        
         setupNoAuthenticationIcon()
     }
     

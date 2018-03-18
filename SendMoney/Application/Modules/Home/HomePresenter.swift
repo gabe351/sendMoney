@@ -22,10 +22,6 @@ class HomePresenter: HomePresenterContract {
     
     func authenticateUser() {
         self.view.showLoader()
-        if SendMoneyApplication.getCurrentToken() != nil {
-            self.view.hideLoader()
-            return
-        }
         
         getAuth.authenticate { (useCaseCallback) in
             useCaseCallback.onSuccess() { (token) in

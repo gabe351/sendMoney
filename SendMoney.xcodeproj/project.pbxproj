@@ -39,6 +39,11 @@
 		0437F029205DCAEC0049B214 /* ContactsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F028205DCAEC0049B214 /* ContactsCollectionView.swift */; };
 		0437F02C205DCBD40049B214 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F02B205DCBD40049B214 /* ContactCell.swift */; };
 		0437F02E205DCC0F0049B214 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0437F02D205DCC0F0049B214 /* ContactCell.xib */; };
+		0437F032205DD9840049B214 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F031205DD9840049B214 /* SendMoneyViewController.swift */; };
+		0437F034205DD9B60049B214 /* SendMoney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F033205DD9B60049B214 /* SendMoney.storyboard */; };
+		0437F036205E020C0049B214 /* ContactsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F035205E020C0049B214 /* ContactsContract.swift */; };
+		0437F03B205E046E0049B214 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03A205E046E0049B214 /* User.swift */; };
+		0437F03D205E057F0049B214 /* TransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03C205E057F0049B214 /* TransferRequest.swift */; };
 		04639536205B58C400258597 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04639535205B58C400258597 /* Home.storyboard */; };
 		04639538205B58DD00258597 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639537205B58DD00258597 /* HomeViewController.swift */; };
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
@@ -99,6 +104,11 @@
 		0437F028205DCAEC0049B214 /* ContactsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCollectionView.swift; sourceTree = "<group>"; };
 		0437F02B205DCBD40049B214 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		0437F02D205DCC0F0049B214 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		0437F031205DD9840049B214 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
+		0437F033205DD9B60049B214 /* SendMoney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendMoney.storyboard; sourceTree = "<group>"; };
+		0437F035205E020C0049B214 /* ContactsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsContract.swift; sourceTree = "<group>"; };
+		0437F03A205E046E0049B214 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0437F03C205E057F0049B214 /* TransferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequest.swift; sourceTree = "<group>"; };
 		04639535205B58C400258597 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		04639537205B58DD00258597 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				04639539205B5B2100258597 /* Application */,
+				0437F039205E043B0049B214 /* Entities */,
 				F4049B39205BF39E00434B9E /* Infrastructure */,
 				0463953C205B5F5200258597 /* Utils */,
 				0463953B205B5F3800258597 /* Assets */,
@@ -224,10 +235,10 @@
 		0437F002205D5C1F0049B214 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				0437F02F205DD4C00049B214 /* SendMoneyDialog */,
 				0437F027205DCA2F0049B214 /* CollectionView */,
 				0437F004205D5C3E0049B214 /* ContactsViewController.swift */,
 				0437F008205D5C540049B214 /* Contacts.storyboard */,
+				0437F035205E020C0049B214 /* ContactsContract.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -294,11 +305,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		0437F02F205DD4C00049B214 /* SendMoneyDialog */ = {
+		0437F030205DD9670049B214 /* SendMoney */ = {
 			isa = PBXGroup;
 			children = (
+				0437F031205DD9840049B214 /* SendMoneyViewController.swift */,
+				0437F033205DD9B60049B214 /* SendMoney.storyboard */,
 			);
-			path = SendMoneyDialog;
+			path = SendMoney;
+			sourceTree = "<group>";
+		};
+		0437F039205E043B0049B214 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0437F03A205E046E0049B214 /* User.swift */,
+				0437F03C205E057F0049B214 /* TransferRequest.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		04639534205B516B00258597 /* Home */ = {
@@ -378,6 +400,7 @@
 			children = (
 				04639534205B516B00258597 /* Home */,
 				0437F002205D5C1F0049B214 /* Contacts */,
+				0437F030205DD9670049B214 /* SendMoney */,
 				0437F003205D5C2C0049B214 /* History */,
 				0437F014205DB0240049B214 /* CustomUIAlert */,
 			);
@@ -543,6 +566,7 @@
 				042F150E205B3EB000F57795 /* Assets.xcassets in Resources */,
 				0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */,
 				0437F00B205D5C5D0049B214 /* History.storyboard in Resources */,
+				0437F034205DD9B60049B214 /* SendMoney.storyboard in Resources */,
 				04639536205B58C400258597 /* Home.storyboard in Resources */,
 				0437F02E205DCC0F0049B214 /* ContactCell.xib in Resources */,
 			);
@@ -680,9 +704,11 @@
 				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				0437F02C205DCBD40049B214 /* ContactCell.swift in Sources */,
+				0437F03D205E057F0049B214 /* TransferRequest.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
+				0437F036205E020C0049B214 /* ContactsContract.swift in Sources */,
 				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
 				0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */,
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
@@ -692,6 +718,7 @@
 				0437F017205DB0680049B214 /* CustomUIAlertViewController.swift in Sources */,
 				0437EFDE205D2F130049B214 /* HomeContract.swift in Sources */,
 				0437F005205D5C3E0049B214 /* ContactsViewController.swift in Sources */,
+				0437F032205DD9840049B214 /* SendMoneyViewController.swift in Sources */,
 				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,
 				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
 				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,
@@ -703,6 +730,7 @@
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				0437F024205DBEC90049B214 /* CustomAlertDelegate.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
+				0437F03B205E046E0049B214 /* User.swift in Sources */,
 				0437F029205DCAEC0049B214 /* ContactsCollectionView.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 				0437F001205D56140049B214 /* RoundedImageView.swift in Sources */,

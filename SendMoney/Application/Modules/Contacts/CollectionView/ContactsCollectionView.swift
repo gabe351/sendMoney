@@ -9,6 +9,8 @@
 import UIKit
 
 class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+        
+    var parentView: ContactsViewContract?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,6 +30,10 @@ class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         let cell = self.dequeueReusableCell(withReuseIdentifier: ContactCell.ID, for: indexPath) as! ContactCell
         cell.configureView()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        parentView?.openSendMoneyDialog()        
     }
     
     func collectionView(_ collectionView: UICollectionView,

@@ -20,8 +20,12 @@ public class ContactsViewController: UIViewController {
         super.viewDidLoad()
         
         configureView()
-        contactsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
-
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        contactsCollectionView.parentView = self
     }
     
     @IBAction func BackDidPressed(_ sender: Any) {
@@ -30,11 +34,20 @@ public class ContactsViewController: UIViewController {
     
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
+        contactsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }        
+}
+
+//MARK View contract implementation
+extension ContactsViewController: ContactsViewContract {
+    func openSendMoneyDialog() {
+        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
 }
 
 //MARK StoryboardLoadable implementation
