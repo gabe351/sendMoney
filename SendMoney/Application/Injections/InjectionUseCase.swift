@@ -27,4 +27,8 @@ class InjectionUseCase {
     static func provideGetContacts() -> GetContacts {
         return GetContacts(localDataSource: contactsLocalDataSource)
     }
+    
+    static func provideSendMoney() -> SendMoney {
+        return SendMoney(remoteDataSource: InjectionRemoteDataSource.provideTransferRemoteDataSource())
+    }
 }

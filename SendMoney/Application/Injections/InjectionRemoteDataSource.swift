@@ -14,4 +14,7 @@ class InjectionRemoteDataSource {
         return AuthenticateRemoteDataSourceImpl()
     }
     
+    static func provideTransferRemoteDataSource() -> TransferRemoteDataSource {
+        return TransferRemoteDataSourceImpl()
+    }
 }

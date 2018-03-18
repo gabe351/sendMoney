@@ -47,7 +47,7 @@ public class TransferRequest {
         return date
     }
     
-    func asBodyParameters() -> [String: Any?] {
+    func asBodyParameters() -> [String: Any] {
         return [
             APIField.id:          getId(),
             APIField.clientId:    getClientId(),

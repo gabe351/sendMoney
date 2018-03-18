@@ -12,15 +12,11 @@ class AuthenticateRemoteDataSourceImpl: AuthenticateRemoteDataSource {
     
     func authencticate(_ loadCallback: @escaping (BaseCallback<Any>) -> Void) {
         
-        ApiDataSource.request(url: RemoteUtils.buildUrl(path: "GenerateToken"), parameters: RemoteUtils.buildAuthParameters(), method: .get) { (callback) in
+        ApiDataSource.simpleRequest(url: RemoteUtils.buildUrl(path: "GenerateToken"), parameters: RemoteUtils.buildAuthParameters(), method: .get) { (callback) in
             callback.onSuccess() { (sessionToken) in
                 loadCallback(BaseCallback.success(sessionToken))
             }
-            
-            callback.onEmptyData {
-                
-            }
-            
+                                    
             callback.onFailed() { (error) in
                 loadCallback(BaseCallback.failed(error: error))
             }                        

@@ -43,6 +43,9 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendDidPressed:" destination="N8e-q1-n0S" eventType="touchUpInside" id="vH1-2W-9ft"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perfil" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-Up-48O" customClass="RoundedImageView" customModule="SendMoney" customModuleProvider="target">
                                         <rect key="frame" x="105" y="19" width="60" height="60"/>
