@@ -13,8 +13,8 @@ class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let contactCell = UINib(nibName: ContactCell.NIB_NAME, bundle: nil)
-        self.register(contactCell, forCellWithReuseIdentifier: ContactCell.ID)
+        let contactCell = UINib(nibName: ContactHistoryCell.NIB_NAME, bundle: nil)
+        self.register(contactCell, forCellWithReuseIdentifier: ContactHistoryCell.ID)
         
         self.backgroundColor = UIColor.clear.withAlphaComponent(0)
         
@@ -27,7 +27,7 @@ class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.dequeueReusableCell(withReuseIdentifier: ContactCell.ID, for: indexPath) as! ContactCell
+        let cell = self.dequeueReusableCell(withReuseIdentifier: ContactHistoryCell.ID, for: indexPath) as! ContactHistoryCell
         cell.configureView()
         return cell
     }

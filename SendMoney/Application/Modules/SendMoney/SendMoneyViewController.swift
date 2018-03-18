@@ -20,6 +20,7 @@ class SendMoneyViewController: UIViewController {
         
         valueTextField.attributedPlaceholder = NSAttributedString(string: "R$ 0,00",
                                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightBlue])
+        hideKeyboardWhenTappedAround()        
     }
     
     @IBAction func closeButtonDidPressed(_ sender: Any) {

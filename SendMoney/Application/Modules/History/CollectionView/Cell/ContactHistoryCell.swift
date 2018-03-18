@@ -1,20 +1,22 @@
 //
-//  ContactCell.swift
+//  ContactHistoryCell.swift
 //  SendMoney
 //
-//  Created by Gabriel Rosa on 17/03/18.
+//  Created by Gabriel Rosa on 18/03/18.
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
 import UIKit
 
-class ContactCell: UICollectionViewCell {
+class ContactHistoryCell: UICollectionViewCell {
     
-    public static let NIB_NAME = "ContactCell"
-    public static let ID       = "ContactCellId"
+    public static let NIB_NAME = "ContactHistoryCell"
+    public static let ID       = "ContactHistoryCellId"
+    
     @IBOutlet weak var contactImageView: RoundedImageView!
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var contactPhoneNumber: UILabel!
+    @IBOutlet weak var contactMoneyValue: UILabel!
     
     func configureView() {
         contactImageView.defaultRadius()
