@@ -71,10 +71,11 @@
 		F4C436F6205EE06D008C6EC9 /* ContactEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436F5205EE06D008C6EC9 /* ContactEntry.swift */; };
 		F4C436F8205EE140008C6EC9 /* TransferEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436F7205EE140008C6EC9 /* TransferEntry.swift */; };
 		F4C436FD205EE240008C6EC9 /* SaveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436FC205EE240008C6EC9 /* SaveContacts.swift */; };
-		F4C436FF205EEC53008C6EC9 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436FE205EEC53008C6EC9 /* ContactList.swift */; };
+		F4C436FF205EEC53008C6EC9 /* ContactListUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436FE205EEC53008C6EC9 /* ContactListUtils.swift */; };
 		F4C43701205EEDFC008C6EC9 /* GetContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43700205EEDFC008C6EC9 /* GetContacts.swift */; };
 		F4C43703205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43702205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift */; };
 		F4C43705205EEFE9008C6EC9 /* ContactConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */; };
+		F4C43707205EF303008C6EC9 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43706205EF303008C6EC9 /* ContactsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,10 +161,11 @@
 		F4C436F5205EE06D008C6EC9 /* ContactEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEntry.swift; sourceTree = "<group>"; };
 		F4C436F7205EE140008C6EC9 /* TransferEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferEntry.swift; sourceTree = "<group>"; };
 		F4C436FC205EE240008C6EC9 /* SaveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContacts.swift; sourceTree = "<group>"; };
-		F4C436FE205EEC53008C6EC9 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		F4C436FE205EEC53008C6EC9 /* ContactListUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUtils.swift; sourceTree = "<group>"; };
 		F4C43700205EEDFC008C6EC9 /* GetContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContacts.swift; sourceTree = "<group>"; };
 		F4C43702205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactConverter.swift; sourceTree = "<group>"; };
+		F4C43706205EF303008C6EC9 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				0437F004205D5C3E0049B214 /* ContactsViewController.swift */,
 				0437F008205D5C540049B214 /* Contacts.storyboard */,
 				0437F035205E020C0049B214 /* ContactsContract.swift */,
+				F4C43706205EF303008C6EC9 /* ContactsPresenter.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -466,7 +469,7 @@
 				F4049B43205C0AA100434B9E /* Extension */,
 				04639541205B60CA00258597 /* BaseCallback.swift */,
 				0437EFD8205D27540049B214 /* RemoteUtils.swift */,
-				F4C436FE205EEC53008C6EC9 /* ContactList.swift */,
+				F4C436FE205EEC53008C6EC9 /* ContactListUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -855,7 +858,7 @@
 				0437F045205E9E010049B214 /* HistoryDetailViewController.swift in Sources */,
 				0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */,
 				0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */,
-				F4C436FF205EEC53008C6EC9 /* ContactList.swift in Sources */,
+				F4C436FF205EEC53008C6EC9 /* ContactListUtils.swift in Sources */,
 				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
 				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
@@ -892,6 +895,7 @@
 				0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */,
 				0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */,
 				0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */,
+				F4C43707205EF303008C6EC9 /* ContactsPresenter.swift in Sources */,
 				F4C436F8205EE140008C6EC9 /* TransferEntry.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,

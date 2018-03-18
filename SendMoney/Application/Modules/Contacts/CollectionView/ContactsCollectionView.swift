@@ -11,6 +11,7 @@ import UIKit
 class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
         
     var parentView: ContactsViewContract?
+    var contacts = [Contact]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,17 +26,17 @@ class ContactsCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return contacts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.dequeueReusableCell(withReuseIdentifier: ContactCell.ID, for: indexPath) as! ContactCell
-        cell.configureView()
+        cell.configureView(contact: contacts[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        parentView?.openSendMoneyDialog()        
+        parentView?.openSendMoneyDialog(contact: contacts[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView,

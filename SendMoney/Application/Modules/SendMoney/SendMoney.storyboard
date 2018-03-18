@@ -44,7 +44,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perfil" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-Up-48O" customClass="RoundedImageView" customModule="SendMoney" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perfil" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-Up-48O" customClass="RoundedImageView" customModule="SendMoney" customModuleProvider="target">
                                         <rect key="frame" x="105" y="19" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <userDefinedRuntimeAttributes>
@@ -107,6 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="cK3-QY-o4M"/>
                     </view>
                     <connections>
+                        <outlet property="contactImage" destination="lPL-Up-48O" id="3Bm-6f-Hz3"/>
+                        <outlet property="contactName" destination="vTJ-Sc-Rpv" id="wfk-aU-pXy"/>
+                        <outlet property="contactPhoneNumber" destination="qwR-IK-TCQ" id="PeN-OA-hdS"/>
                         <outlet property="valueTextField" destination="Xyz-lv-F7U" id="Bsd-uE-tdE"/>
                     </connections>
                 </viewController>

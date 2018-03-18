@@ -16,7 +16,16 @@ class ContactCell: UICollectionViewCell {
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var contactPhoneNumber: UILabel!
     
-    func configureView() {
+    func configureView(contact: Contact) {
+        
+        contactImageView.image  = getImageBy(id: contact.id)
+        contactNameLabel.text   = contact.name
+        contactPhoneNumber.text = contact.phoneNumber
+        
+        setupLayout()
+    }
+    
+    private func setupLayout() {
         contactImageView.defaultRadius()
         contactNameLabel.sizeToFit()
         contactPhoneNumber.sizeToFit()

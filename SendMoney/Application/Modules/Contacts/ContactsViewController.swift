@@ -16,6 +16,12 @@ public class ContactsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var contactsCollectionView: ContactsCollectionView!
     
+    lazy var presenter: ContactsPresenterContract = {
+        return ContactsPresenter(view: self,
+                                 saveContacts: InjectionUseCase.provideSaveContacts(),
+                                 getContacts: InjectionUseCase.provideGetContacts())
+    }()
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +32,8 @@ public class ContactsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         contactsCollectionView.parentView = self
+        
+        presenter.loadContacts()
     }
     
     @IBAction func BackDidPressed(_ sender: Any) {
@@ -44,10 +52,17 @@ public class ContactsViewController: UIViewController {
 
 //MARK View contract implementation
 extension ContactsViewController: ContactsViewContract {
-    func openSendMoneyDialog() {
-        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
-        self.present(viewController, animated: true, completion: nil)
+    
+    func show(contacts: [Contact]) {
+        contactsCollectionView.contacts = contacts
+        contactsCollectionView.reloadData()
     }
+    
+    func openSendMoneyDialog(contact: Contact) {
+        let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
+        viewController.contact = contact
+        self.present(viewController, animated: true, completion: nil)
+    }    
 }
 
 //MARK StoryboardLoadable implementation

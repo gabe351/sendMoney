@@ -10,11 +10,21 @@ import Foundation
 
 class InjectionUseCase {
     
+    private static let contactsLocalDataSource = InjectionLocalDataSource.provideContactsLocalDataSource()
+    
     static func provideGetAuth() -> GetAuth {
         return GetAuth(remoteDataSource: InjectionRemoteDataSource.provideAuthorizationRemoteDataSource())
     }
     
     static func provideSaveSesstionToken() -> SaveSessionToken {
         return SaveSessionToken(localDataSource: InjectionLocalDataSource.provideSessionLocalDataSource())
+    }
+    
+    static func provideSaveContacts() -> SaveContacts {
+        return SaveContacts(localDataSource: contactsLocalDataSource)
+    }
+    
+    static func provideGetContacts() -> GetContacts {
+        return GetContacts(localDataSource: contactsLocalDataSource)
     }
 }

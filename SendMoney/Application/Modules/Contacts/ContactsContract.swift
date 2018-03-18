@@ -9,5 +9,10 @@
 import Foundation
 
 protocol ContactsViewContract {
-    func openSendMoneyDialog()
+    func show(contacts: [Contact])
+    func openSendMoneyDialog(contact: Contact)
+}
+
+protocol ContactsPresenterContract {
+    func loadContacts()
 }

@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perfil" translatesAutoresizingMaskIntoConstraints="NO" id="yXr-GS-1tP" customClass="RoundedImageView" customModule="SendMoney" customModuleProvider="target">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contact3" translatesAutoresizingMaskIntoConstraints="NO" id="yXr-GS-1tP" customClass="RoundedImageView" customModule="SendMoney" customModuleProvider="target">
                         <rect key="frame" x="20" y="19" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <userDefinedRuntimeAttributes>
@@ -66,6 +66,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Perfil" width="1365" height="1365"/>
+        <image name="contact3" width="1829" height="1036"/>
     </resources>
 </document>

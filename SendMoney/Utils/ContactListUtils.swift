@@ -8,6 +8,15 @@
 
 import UIKit
 
+public func getImageBy(id: Int) -> UIImage {
+    for contact in buildContacts() {
+        if id == contact.id {
+            return contact.image
+        }
+    }
+    return #imageLiteral(resourceName: "placeholderUser")
+}
+
 public func buildContacts() -> [Contact] {
     
     var contacts = [Contact]()
