@@ -13,10 +13,18 @@ class SendMoneyViewController: UIViewController {
     public static let NIB_NAME = "SendMoney"
     public static let ID       = "SendMoneyId"
     
+    @IBOutlet weak var valueTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        valueTextField.attributedPlaceholder = NSAttributedString(string: "R$ 0,00",
+                                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightBlue])
     }
     
+    @IBAction func closeButtonDidPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK StoryboardLoadable implementation
