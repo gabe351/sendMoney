@@ -8,10 +8,10 @@
 
 import UIKit
 
-struct User {
-    let id:    Int
-    let name:  String
-    let email: String
-    let wallet: Float
-    let image: UIImage
+public struct Contact {
+    let id:          Int
+    let name:        String
+    let email:       String
+    let phoneNumber: String
+    let image:       UIImage
 }
