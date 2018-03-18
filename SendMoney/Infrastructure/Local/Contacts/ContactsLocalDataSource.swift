@@ -10,6 +10,12 @@ import Foundation
 
 protocol ContactsLocalDataSource {
     
-//    func
+    func saveMany(contacts: [Contact]) -> [Contact]?
+    
+    func all() -> [Contact]
+    
+    func findBy(id: Int) -> Contact
+    
+    func destroyMany(ids: [Int])
     
 }

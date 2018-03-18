@@ -1,5 +1,5 @@
 //
-//  SaveContacts.swift
+//  GetContacts.swift
 //  SendMoney
 //
 //  Created by Stant 02 on 18/03/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SaveContacts {
+class GetContacts {
     
     private let localDataSource: ContactsLocalDataSource
     
@@ -16,7 +16,7 @@ class SaveContacts {
         self.localDataSource = localDataSource
     }
     
-    func save() {
-        let _ = localDataSource.saveMany(contacts: buildContacts())
+    func all() -> [Contact] {
+        return localDataSource.all()
     }
 }

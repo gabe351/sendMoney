@@ -72,6 +72,9 @@
 		F4C436F8205EE140008C6EC9 /* TransferEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436F7205EE140008C6EC9 /* TransferEntry.swift */; };
 		F4C436FD205EE240008C6EC9 /* SaveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436FC205EE240008C6EC9 /* SaveContacts.swift */; };
 		F4C436FF205EEC53008C6EC9 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C436FE205EEC53008C6EC9 /* ContactList.swift */; };
+		F4C43701205EEDFC008C6EC9 /* GetContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43700205EEDFC008C6EC9 /* GetContacts.swift */; };
+		F4C43703205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43702205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift */; };
+		F4C43705205EEFE9008C6EC9 /* ContactConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +161,9 @@
 		F4C436F7205EE140008C6EC9 /* TransferEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferEntry.swift; sourceTree = "<group>"; };
 		F4C436FC205EE240008C6EC9 /* SaveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContacts.swift; sourceTree = "<group>"; };
 		F4C436FE205EEC53008C6EC9 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		F4C43700205EEDFC008C6EC9 /* GetContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContacts.swift; sourceTree = "<group>"; };
+		F4C43702205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -574,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C436F0205EDD25008C6EC9 /* ContactsLocalDataSource.swift */,
+				F4C43702205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -591,6 +598,7 @@
 		F4C436F9205EE1F2008C6EC9 /* Converters */ = {
 			isa = PBXGroup;
 			children = (
+				F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */,
 			);
 			path = Converters;
 			sourceTree = "<group>";
@@ -607,6 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C436FC205EE240008C6EC9 /* SaveContacts.swift */,
+				F4C43700205EEDFC008C6EC9 /* GetContacts.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -874,10 +883,12 @@
 				0437F032205DD9840049B214 /* SendMoneyViewController.swift in Sources */,
 				0437EFF5205D397E0049B214 /* SendMoneyApplication.swift in Sources */,
 				0437F040205E9A810049B214 /* HistoryCollectionView.swift in Sources */,
+				F4C43705205EEFE9008C6EC9 /* ContactConverter.swift in Sources */,
 				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
 				F4C436F4205EE03B008C6EC9 /* Entry.swift in Sources */,
 				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,
 				0437EFF3205D38140049B214 /* InjectionUseCase.swift in Sources */,
+				F4C43701205EEDFC008C6EC9 /* GetContacts.swift in Sources */,
 				0437EFE4205D305E0049B214 /* GetAuth.swift in Sources */,
 				0437F00E205D8A270049B214 /* ConfigureViews.swift in Sources */,
 				0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */,
@@ -888,6 +899,7 @@
 				0437F024205DBEC90049B214 /* CustomAlertDelegate.swift in Sources */,
 				0437F04B205EB5080049B214 /* ContactHistoryCell.swift in Sources */,
 				04639538205B58DD00258597 /* HomeViewController.swift in Sources */,
+				F4C43703205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift in Sources */,
 				0437F03B205E046E0049B214 /* User.swift in Sources */,
 				F4C436FD205EE240008C6EC9 /* SaveContacts.swift in Sources */,
 				0437F042205E9C9E0049B214 /* UIViewControllerExtension.swift in Sources */,
