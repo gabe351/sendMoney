@@ -21,5 +21,13 @@ class RemoteUtils {
         ]
         
         return parameters
-    }        
+    }
+    
+    static func buildHistoryParameters(token: String = SendMoneyApplication.getCurrentToken()!) -> [String: Any] {
+        let parameters: [String: Any] = [
+            "token" : token
+        ]
+        
+        return parameters
+    }
 }

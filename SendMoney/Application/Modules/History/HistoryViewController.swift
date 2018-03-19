@@ -25,6 +25,14 @@ public class HistoryViewController: UIViewController {
         configureView()
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        HistoryRemoteDataSourceImpl().getHistory(token: SendMoneyApplication.getCurrentToken()!) { (callback) in
+            
+        }
+    }
+    
     @IBAction func backDidPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
