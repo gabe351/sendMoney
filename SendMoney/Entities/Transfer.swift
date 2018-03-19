@@ -7,7 +7,7 @@
 //
 
 public class Transfer {
-    
+
     private let id: Int
     private let clientId: Int
     private let walletValue: Float

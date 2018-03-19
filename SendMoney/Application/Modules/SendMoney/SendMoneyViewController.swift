@@ -17,6 +17,8 @@ class SendMoneyViewController: UIViewController {
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var contactName: UILabel!
     @IBOutlet weak var contactPhoneNumber: UILabel!
+    @IBOutlet weak var dialogViewContent: RoundView!
+    @IBOutlet weak var localLoder: UIActivityIndicatorView!
     
     lazy var presenter: SendMoneyPresenterContract = {
         return SendMoneyPresenter(view: self,
@@ -56,6 +58,8 @@ class SendMoneyViewController: UIViewController {
     private func configureView() {
         valueTextField.attributedPlaceholder = NSAttributedString(string: "R$ 0,00",
                                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightBlue])
+        localLoder.color = UIColor.lightBlue
+        localLoder.scale(factor: 2)
         hideKeyboardWhenTappedAround()
     }
 }
@@ -63,12 +67,24 @@ class SendMoneyViewController: UIViewController {
 extension SendMoneyViewController: SendMoneyViewContract {
     
     func showLoader() {
-        print("Show loader")
+        dialogViewContent.isHidden = true
+        localLoder.isHidden        = false
     }
     
     func hideLoader() {
-        print("Hide loader")
+        dialogViewContent.isHidden = false
+        localLoder.isHidden        = true        
     }
+    
+    func showSuccess() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func showErrorDialog() {
+        
+    }
+    
+    
 }
 
 //MARK StoryboardLoadable implementation

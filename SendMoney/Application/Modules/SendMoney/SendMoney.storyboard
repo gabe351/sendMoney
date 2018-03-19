@@ -106,6 +106,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LOS-pN-zsh">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cK3-QY-o4M"/>
                     </view>
@@ -113,6 +117,8 @@
                         <outlet property="contactImage" destination="lPL-Up-48O" id="3Bm-6f-Hz3"/>
                         <outlet property="contactName" destination="vTJ-Sc-Rpv" id="wfk-aU-pXy"/>
                         <outlet property="contactPhoneNumber" destination="qwR-IK-TCQ" id="PeN-OA-hdS"/>
+                        <outlet property="dialogViewContent" destination="Jb5-kM-8g1" id="wMF-Wf-D7c"/>
+                        <outlet property="localLoder" destination="LOS-pN-zsh" id="FIg-V4-lQR"/>
                         <outlet property="valueTextField" destination="Xyz-lv-F7U" id="Bsd-uE-tdE"/>
                     </connections>
                 </viewController>

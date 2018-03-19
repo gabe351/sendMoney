@@ -26,4 +26,8 @@ public class ApiDataSource {
             }
         }
     }
+    
+    public static func requestWithJson(url: String, parameters: Parameters, method: HTTPMethod) {
+        
+    }
 }

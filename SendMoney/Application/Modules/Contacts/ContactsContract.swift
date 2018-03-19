@@ -11,6 +11,9 @@ import Foundation
 protocol ContactsViewContract {
     func show(contacts: [Contact])
     func openSendMoneyDialog(contact: Contact)
+    
+    func showLoader()
+    func hideLoader()
 }
 
 protocol ContactsPresenterContract {

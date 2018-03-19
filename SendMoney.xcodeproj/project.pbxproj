@@ -59,6 +59,8 @@
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
 		04639542205B60CA00258597 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639541205B60CA00258597 /* BaseCallback.swift */; };
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
+		0496AB6F2060780500428806 /* TransfersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB6E2060780500428806 /* TransfersResponse.swift */; };
+		0496AB712060816300428806 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB702060816300428806 /* UIActivityIndicatorView.swift */; };
 		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
 		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
 		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
@@ -157,6 +159,8 @@
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
 		04639541205B60CA00258597 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
+		0496AB6E2060780500428806 /* TransfersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersResponse.swift; sourceTree = "<group>"; };
+		0496AB702060816300428806 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
 		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 			children = (
 				0437F03A205E046E0049B214 /* Contact.swift */,
 				0437F03C205E057F0049B214 /* Transfer.swift */,
+				0496AB6E2060780500428806 /* TransfersResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				F4049B44205C0AB900434B9E /* UIColorExtension.swift */,
 				0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */,
 				0437F041205E9C9E0049B214 /* UIViewControllerExtension.swift */,
+				0496AB702060816300428806 /* UIActivityIndicatorView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -969,6 +975,7 @@
 				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
 				0437EFD9205D27540049B214 /* RemoteUtils.swift in Sources */,
 				F4C436EE205ED7FF008C6EC9 /* GradientView.swift in Sources */,
+				0496AB712060816300428806 /* UIActivityIndicatorView.swift in Sources */,
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
 				04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */,
@@ -1008,6 +1015,7 @@
 				F4C43703205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift in Sources */,
 				F4C43710205F0429008C6EC9 /* TransferRemoteDataSource.swift in Sources */,
 				0437F03B205E046E0049B214 /* Contact.swift in Sources */,
+				0496AB6F2060780500428806 /* TransfersResponse.swift in Sources */,
 				F4C436FD205EE240008C6EC9 /* SaveContacts.swift in Sources */,
 				0437F042205E9C9E0049B214 /* UIViewControllerExtension.swift in Sources */,
 				0437F029205DCAEC0049B214 /* ContactsCollectionView.swift in Sources */,

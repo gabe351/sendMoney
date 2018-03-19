@@ -11,6 +11,8 @@ import Foundation
 protocol SendMoneyViewContract {
     func showLoader()
     func hideLoader()
+    func showErrorDialog()
+    func showSuccess()
 }
 
 protocol SendMoneyPresenterContract {

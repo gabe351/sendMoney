@@ -60,6 +60,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oci-9S-dNH">
+                                <rect key="frame" x="176" y="325" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8L4-fh-cka"/>
@@ -67,6 +71,7 @@
                     <connections>
                         <outlet property="backButton" destination="yxo-qw-s9L" id="hst-9n-cly"/>
                         <outlet property="contactsCollectionView" destination="rfx-Hi-3Rq" id="hW0-h7-dir"/>
+                        <outlet property="localLoader" destination="oci-9S-dNH" id="BEK-AC-sfP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qS8-kO-OQI" userLabel="First Responder" sceneMemberID="firstResponder"/>

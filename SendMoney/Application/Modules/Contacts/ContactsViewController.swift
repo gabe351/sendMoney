@@ -15,6 +15,7 @@ public class ContactsViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var contactsCollectionView: ContactsCollectionView!
+    @IBOutlet weak var localLoader: UIActivityIndicatorView!
     
     lazy var presenter: ContactsPresenterContract = {
         return ContactsPresenter(view: self,
@@ -48,7 +49,9 @@ public class ContactsViewController: UIViewController {
     
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
-        
+        localLoader.color = UIColor.lightBlue
+        localLoader.scale(factor: 2)
+        showLoader()
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
@@ -62,13 +65,22 @@ extension ContactsViewController: ContactsViewContract {
     func show(contacts: [Contact]) {
         contactsCollectionView.contacts = contacts
         contactsCollectionView.reloadData()
+        hideLoader()
     }
     
     func openSendMoneyDialog(contact: Contact) {
         let viewController = UIStoryboard.loadViewController() as SendMoneyViewController
         viewController.contact = contact
         self.present(viewController, animated: true, completion: nil)
-    }    
+    }
+    
+    func hideLoader() {
+        localLoader.isHidden = true
+    }
+    
+    func showLoader() {
+        localLoader.isHidden = false
+    }
 }
 
 //MARK StoryboardLoadable implementation

@@ -20,6 +20,7 @@ class SendMoneyPresenter: SendMoneyPresenterContract {
     }
     
     func sendMoney(clientId: Int, value: Float) {
+        view.showLoader()
         let transfer = Transfer(id: Int(arc4random_uniform(1000000)),
                                 clientId: clientId,
                                 walletValue: value,
@@ -30,7 +31,7 @@ class SendMoneyPresenter: SendMoneyPresenterContract {
             
             useCaseCallback.onSuccess() { (response) in
                 self.view.hideLoader()
-                //                TODO - Display success
+                self.view.showSuccess()
             }
             
             useCaseCallback.onFailed() { (error) in
