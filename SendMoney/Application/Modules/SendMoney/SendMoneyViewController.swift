@@ -41,14 +41,9 @@ class SendMoneyViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func sendDidPressed(_ sender: Any) {
-//        TODO CREATE DTO E TAL
-        let a = TransferRequest(id: 12,
-                                clientId: (contact?.id)!,
-                                walletValue: 25.0,
-                                token: SendMoneyApplication.getCurrentToken()!,
-                                date: "2018-03-18T14:14:47.2543574-03:00")
-        
-        presenter.sendMoney(transfer: a)
+                    
+        presenter.sendMoney(clientId: (contact?.id)!,
+                            value: (valueTextField.text! as NSString).floatValue)
         
     }
     

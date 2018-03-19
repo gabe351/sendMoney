@@ -10,14 +10,15 @@ import Foundation
 
 class TransferEntry: Entry {
     
+    @objc dynamic var guid     = ""
     @objc dynamic var id       = Int()
-    @objc dynamic var clientId = ""
-    @objc dynamic var Value    = ""
+    @objc dynamic var clientId = Int()
+    @objc dynamic var Value    = Float()
     @objc dynamic var token    = ""
     @objc dynamic var date     = Date(timeIntervalSince1970: 1)
     
     override static func primaryKey() -> String? {
-        return "id"
+        return "guid"
     }
     
 }

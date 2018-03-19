@@ -43,7 +43,7 @@
 		0437F034205DD9B60049B214 /* SendMoney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437F033205DD9B60049B214 /* SendMoney.storyboard */; };
 		0437F036205E020C0049B214 /* ContactsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F035205E020C0049B214 /* ContactsContract.swift */; };
 		0437F03B205E046E0049B214 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03A205E046E0049B214 /* Contact.swift */; };
-		0437F03D205E057F0049B214 /* TransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03C205E057F0049B214 /* TransferRequest.swift */; };
+		0437F03D205E057F0049B214 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03C205E057F0049B214 /* Transfer.swift */; };
 		0437F040205E9A810049B214 /* HistoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F03F205E9A810049B214 /* HistoryCollectionView.swift */; };
 		0437F042205E9C9E0049B214 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F041205E9C9E0049B214 /* UIViewControllerExtension.swift */; };
 		0437F045205E9E010049B214 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437F044205E9E010049B214 /* HistoryDetailViewController.swift */; };
@@ -59,6 +59,10 @@
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
 		04639542205B60CA00258597 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639541205B60CA00258597 /* BaseCallback.swift */; };
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
+		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
+		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
+		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
+		04B1C9EA205F39AA00C71860 /* TransferConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E9205F39AA00C71860 /* TransferConverter.swift */; };
 		7AAA61D81A6EB6EEB2B50FBB /* Pods_SendMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0424B751967CE1F6766ECFF /* Pods_SendMoney.framework */; };
 		9940AEEB28041FE1EC35750B /* Pods_SendMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D7B6879E5AE5CAA318E0C4 /* Pods_SendMoneyTests.framework */; };
 		F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4049B3C205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift */; };
@@ -134,7 +138,7 @@
 		0437F033205DD9B60049B214 /* SendMoney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendMoney.storyboard; sourceTree = "<group>"; };
 		0437F035205E020C0049B214 /* ContactsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsContract.swift; sourceTree = "<group>"; };
 		0437F03A205E046E0049B214 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		0437F03C205E057F0049B214 /* TransferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequest.swift; sourceTree = "<group>"; };
+		0437F03C205E057F0049B214 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		0437F03F205E9A810049B214 /* HistoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionView.swift; sourceTree = "<group>"; };
 		0437F041205E9C9E0049B214 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0437F044205E9E010049B214 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,10 @@
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
 		04639541205B60CA00258597 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
+		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
+		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		04B1C9E9205F39AA00C71860 /* TransferConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferConverter.swift; sourceTree = "<group>"; };
 		4BF568AE16BC139C949F0328 /* Pods-SendMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5412FE43B45CD15028728F30 /* Pods-SendMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoneyTests/Pods-SendMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71064EC0DC27F6108716813D /* Pods-SendMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendMoney/Pods-SendMoney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +271,7 @@
 				F4C436F2205EDD42008C6EC9 /* Entries */,
 				0437EFE6205D343D0049B214 /* Session */,
 				F4C436EF205EDC6C008C6EC9 /* Contacts */,
+				04B1C9E4205F389C00C71860 /* Transfer */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -379,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				0437F03A205E046E0049B214 /* Contact.swift */,
-				0437F03C205E057F0049B214 /* TransferRequest.swift */,
+				0437F03C205E057F0049B214 /* Transfer.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -483,6 +492,7 @@
 				04639541205B60CA00258597 /* BaseCallback.swift */,
 				0437EFD8205D27540049B214 /* RemoteUtils.swift */,
 				F4C436FE205EEC53008C6EC9 /* ContactListUtils.swift */,
+				04B1C9E2205F364400C71860 /* DateConverter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -522,6 +532,15 @@
 				0437F014205DB0240049B214 /* CustomUIAlert */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		04B1C9E4205F389C00C71860 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */,
+				04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 		34A877F402E063CD211A3D69 /* Frameworks */ = {
@@ -616,6 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */,
+				04B1C9E9205F39AA00C71860 /* TransferConverter.swift */,
 			);
 			path = Converters;
 			sourceTree = "<group>";
@@ -805,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3C3B4E8ADE5173F6991390E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -823,7 +843,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		51095791CB1836DA15698EFC /* [CP] Embed Pods Frameworks */ = {
@@ -901,11 +921,12 @@
 				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
 				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
+				04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */,
 				F4C4370D205F03B1008C6EC9 /* SendMoney.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				0437F02C205DCBD40049B214 /* ContactCell.swift in Sources */,
 				0437F057205EBB0F0049B214 /* HistoryContract.swift in Sources */,
-				0437F03D205E057F0049B214 /* TransferRequest.swift in Sources */,
+				0437F03D205E057F0049B214 /* Transfer.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
 				F4C436F6205EE06D008C6EC9 /* ContactEntry.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
@@ -917,6 +938,7 @@
 				F4C436EE205ED7FF008C6EC9 /* GradientView.swift in Sources */,
 				0437EFEC205D35F30049B214 /* SaveSessionToken.swift in Sources */,
 				0437EFEA205D34C50049B214 /* SessionLocalDataSourceImpl.swift in Sources */,
+				04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */,
 				0437F053205EB7250049B214 /* HistoryDetailCell.swift in Sources */,
 				F4049B3D205BFAD800434B9E /* AuthenticationRemoteDataSourceImpl.swift in Sources */,
 				F4049B45205C0AB900434B9E /* UIColorExtension.swift in Sources */,
@@ -939,7 +961,9 @@
 				0437F013205D9F9E0049B214 /* StoryboardLoadable.swift in Sources */,
 				F4C43707205EF303008C6EC9 /* ContactsPresenter.swift in Sources */,
 				F4C436F8205EE140008C6EC9 /* TransferEntry.swift in Sources */,
+				04B1C9EA205F39AA00C71860 /* TransferConverter.swift in Sources */,
 				F4C43714205F0744008C6EC9 /* SendMoneyPresenter.swift in Sources */,
+				04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				F4C436F1205EDD25008C6EC9 /* ContactsLocalDataSource.swift in Sources */,

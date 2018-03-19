@@ -14,5 +14,5 @@ protocol SendMoneyViewContract {
 }
 
 protocol SendMoneyPresenterContract {
-    func sendMoney(transfer: TransferRequest)
+    func sendMoney(clientId: Int, value: Float)
 }

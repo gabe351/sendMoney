@@ -19,19 +19,24 @@ class SendMoneyPresenter: SendMoneyPresenterContract {
         self.sendMoney = sendMoney
     }
     
-    func sendMoney(transfer: TransferRequest) {
+    func sendMoney(clientId: Int, value: Float) {
+        let transfer = Transfer(id: Int(arc4random_uniform(1000000)),
+                                clientId: clientId,
+                                walletValue: value,
+                                token: SendMoneyApplication.getCurrentToken()!,
+                                date: DateConverter.fromIso8601(date: Date())!)
+        
         sendMoney.transfer(parameters: transfer.asBodyParameters()) { (useCaseCallback) in
             
             useCaseCallback.onSuccess() { (response) in
                 self.view.hideLoader()
-//                TODO - Display success
+                //                TODO - Display success
             }
             
             useCaseCallback.onFailed() { (error) in
                 self.view.hideLoader()
-//               TODO - Display error
+                //               TODO - Display error
             }
         }
     }
-    
 }

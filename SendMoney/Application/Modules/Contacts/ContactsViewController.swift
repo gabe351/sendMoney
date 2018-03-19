@@ -33,6 +33,12 @@ public class ContactsViewController: UIViewController {
         
         contactsCollectionView.parentView = self
         
+        
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         presenter.loadContacts()
     }
     

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-public class TransferRequest {
+public class Transfer {
     
     private let id: Int
     private let clientId: Int
