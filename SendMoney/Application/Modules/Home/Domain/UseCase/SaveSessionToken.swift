@@ -16,7 +16,7 @@ class SaveSessionToken {
         self.localDataSource = localDataSource
     }
     
-    func save(_ token: String) {
-        localDataSource.save(token: token)
+    func save(_ token: String) {        
+        localDataSource.save(token: token, SessionLocalDataSourceImpl.PREFERENCE_KEY)
     }
 }

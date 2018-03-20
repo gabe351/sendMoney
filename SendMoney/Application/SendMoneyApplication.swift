@@ -11,10 +11,10 @@ import Foundation
 class SendMoneyApplication {
     
     static func getCurrentToken() -> String? {
-        return InjectionLocalDataSource.provideSessionLocalDataSource().getToken()
+        return InjectionLocalDataSource.provideSessionLocalDataSource().getTokenBy(key: SessionLocalDataSourceImpl.PREFERENCE_KEY)
     }
     
     static func destroyToken() {
-        InjectionLocalDataSource.provideSessionLocalDataSource().destroy()
+        InjectionLocalDataSource.provideSessionLocalDataSource().destroyBy(key: SessionLocalDataSourceImpl.PREFERENCE_KEY)
     }
 }

@@ -32,15 +32,16 @@ public class SessionLocalDataSourceImpl: SessionLocalDataSource {
         INSTANCE = nil
     }
     
-    func save(token: String) {        
-        defaultsDao.set(token, forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)
+    func save(token: String, _ key: String) {
+        defaultsDao.set(token, forKey: key)
+    }
+            
+    func getTokenBy(key: String) -> String? {
+        return defaultsDao.string(forKey: key)
     }
     
-    func getToken() -> String? {
-        return defaultsDao.string(forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)
+    func destroyBy(key: String) {
+        defaultsDao.set(nil, forKey: key)
     }
     
-    public func destroy() {
-        defaultsDao.set(nil, forKey: SessionLocalDataSourceImpl.PREFERENCE_KEY)
-    }
 }
