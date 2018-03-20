@@ -10,4 +10,11 @@ import Foundation
 
 protocol HistoryViewContract {
     func goToHistoryDetail()
+    func show(contactTransfers: [ContactTransferDto])
+    func showNoHistory()
+    func showErrorDialog()
+}
+
+protocol HistoryPresenterContract {
+    func loadContactTransfers()
 }

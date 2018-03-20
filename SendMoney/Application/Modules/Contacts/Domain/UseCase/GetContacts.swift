@@ -19,4 +19,8 @@ class GetContacts {
     func all() -> [Contact] {
         return localDataSource.all()
     }
+    
+    func findBy(id: Int) -> Contact {
+        return localDataSource.findBy(id: id)
+    }
 }

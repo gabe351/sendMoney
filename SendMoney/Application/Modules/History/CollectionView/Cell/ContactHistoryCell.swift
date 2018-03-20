@@ -18,7 +18,15 @@ class ContactHistoryCell: UICollectionViewCell {
     @IBOutlet weak var contactPhoneNumber: UILabel!
     @IBOutlet weak var contactMoneyValue: UILabel!
     
-    func configureView() {
+    func configureView(contactTransfer: ContactTransferDto) {
+        contactImageView.image  = contactTransfer.image
+        contactPhoneNumber.text = contactTransfer.phoneNumber
+        contactMoneyValue.text  = contactTransfer.transferValue
+        
+        setupLayout()
+    }
+    
+    private func setupLayout() {
         contactImageView.defaultRadius()
         contactNameLabel.sizeToFit()
         contactPhoneNumber.sizeToFit()

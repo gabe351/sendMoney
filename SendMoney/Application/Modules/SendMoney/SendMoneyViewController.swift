@@ -92,9 +92,7 @@ extension SendMoneyViewController: SendMoneyViewContract {
         let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
         customAlert.delegate = self
         self.present(customAlert, animated: true, completion: nil)
-    }
-    
-    
+    }        
 }
 
 //MARK StoryboardLoadable implementation

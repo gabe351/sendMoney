@@ -54,6 +54,19 @@ public class HistoryViewController: UIViewController {
 
 extension HistoryViewController: HistoryViewContract {
     
+    func showNoHistory() {
+        
+    }
+    
+    func showErrorDialog() {
+        
+    }
+    
+    func show(contactTransfers: [ContactTransferDto]) {
+        
+    }
+    
+    
     func goToHistoryDetail() {
         let viewController = UIStoryboard.loadViewController() as HistoryDetailViewController
         self.present(viewController, animated: true, completion: nil)

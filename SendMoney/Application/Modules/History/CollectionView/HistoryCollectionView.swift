@@ -11,6 +11,7 @@ import UIKit
 class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var parentView: HistoryViewContract?
+    var contactTransfers = [ContactTransferDto]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,12 +26,12 @@ class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return contactTransfers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.dequeueReusableCell(withReuseIdentifier: ContactHistoryCell.ID, for: indexPath) as! ContactHistoryCell
-        cell.configureView()
+        cell.configureView(contactTransfer: contactTransfers[indexPath.row])
         return cell
     }
     
