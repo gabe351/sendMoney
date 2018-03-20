@@ -56,8 +56,14 @@ public class TransferLocalDataSourceImpl: TransferLocalDataSource {
         let entries = Array(realm.objects(TransferEntry.self).filter(predicate))
         
         for entry in entries {
-            contactValue += entry.Value
+            contactValue += entry.value
         }
+        
+        let valueFull = entries.reduce(0, { (value, entry) in
+            value + entry.value
+        })
+        
+        
         
         return contactValue
     }
@@ -68,5 +74,10 @@ public class TransferLocalDataSourceImpl: TransferLocalDataSource {
         let entries = Array(realm.objects(TransferEntry.self).filter(predicate))
         
         return TransferConverter.convertFromEntriesToEntities(entries: entries)
+    }
+    
+    func destroyAll() {
+        let entries = realm.objects(TransferEntry.self)
+        realm.delete(entries)
     }
 }

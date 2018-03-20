@@ -13,4 +13,5 @@ struct ContactTransferDto {
     let name:          String
     let phoneNumber:   String
     let transferValue: String
+    let date         : Date
 }

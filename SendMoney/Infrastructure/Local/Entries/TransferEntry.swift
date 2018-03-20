@@ -13,7 +13,7 @@ class TransferEntry: Entry {
     @objc dynamic var guid     = ""
     @objc dynamic var id       = Int()
     @objc dynamic var clientId = Int()
-    @objc dynamic var Value    = Float()
+    @objc dynamic var value    = Float()
     @objc dynamic var token    = ""
     @objc dynamic var date     = Date(timeIntervalSince1970: 1)
     

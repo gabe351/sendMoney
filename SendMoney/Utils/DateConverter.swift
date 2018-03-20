@@ -12,10 +12,13 @@ public class DateConverter {
     
     public static func fromIso8601(dateStr: String?) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        let index = dateStr?.index((dateStr?.startIndex)!, offsetBy: 10)
         
         if let date = dateStr {
-            return dateFormatter.date(from: date)
+            return dateFormatter.date(from: (dateStr?.substring(to: index!))!)
         }
         
         return nil

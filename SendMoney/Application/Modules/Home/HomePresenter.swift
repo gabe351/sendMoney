@@ -13,15 +13,22 @@ class HomePresenter: HomePresenterContract {
     private let view: HomeViewContract
     private let getAuth: GetAuth
     private let saveSessionToken: SaveSessionToken
+    private let saveContacts: SaveContacts
     
-    init(view: HomeViewContract, getAuth: GetAuth, saveSessionToken: SaveSessionToken) {
+    init(view: HomeViewContract,
+         getAuth: GetAuth,
+         saveSessionToken: SaveSessionToken,
+         saveContacts: SaveContacts) {
+        
         self.view             = view
         self.getAuth          = getAuth
         self.saveSessionToken = saveSessionToken
+        self.saveContacts     = saveContacts
     }
     
     func authenticateUser() {
         self.view.showLoader()
+        saveContacts.save()
         if SendMoneyApplication.getCurrentToken() != nil {
             self.view.hideLoader()
             return

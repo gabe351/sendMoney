@@ -15,10 +15,9 @@ class HistoryRemoteDataSourceImpl: HistoryRemoteDataSource {
         ApiDataSource.requestTransfers(url: RemoteUtils.buildUrl(path: "GetTransfers"),
                                        parameters: RemoteUtils.buildHistoryParameters(token: token),
                                        method: .get) { (callback) in
-            callback.onSuccess() { (response) in
-                
-                
-//                loadCallback(BaseCallback.success(response))
+            callback.onSuccess() { (responses) in
+                let tranfers = TransferConverter.convertFromResponsesToEntities(responses)
+                loadCallback(BaseCallback.success(tranfers))
             }
             
             callback.onFailed() { (error) in

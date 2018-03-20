@@ -37,10 +37,14 @@ class TransferRepositoryImpl: TransferRepository {
     
     func all(_ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void) {
         remoteDataSource.getHistory(token: SendMoneyApplication.getCurrentToken()!) { (remoteCallback) in
-            remoteCallback.onSuccess() { (response) in
-                //                TODO: IMPLEMENT
-//                localDataSource.saveMany(transfers: <#T##[Transfer]#>)
-                loadCallback(BaseCallback.success([Transfer]()))
+            remoteCallback.onSuccess() { (transfers) in
+                
+                if transfers.isEmpty {
+                    loadCallback(BaseCallback.emptyData())
+                } else {                    
+                    let _ = self.localDataSource.saveMany(transfers: transfers)
+                    loadCallback(BaseCallback.success(transfers))
+                }
             }
             
             remoteCallback.onFailed() { (error) in

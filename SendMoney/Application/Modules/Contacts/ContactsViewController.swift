@@ -18,8 +18,7 @@ public class ContactsViewController: UIViewController {
     @IBOutlet weak var localLoader: UIActivityIndicatorView!
     
     lazy var presenter: ContactsPresenterContract = {
-        return ContactsPresenter(view: self,
-                                 saveContacts: InjectionUseCase.provideSaveContacts(),
+        return ContactsPresenter(view: self,                                 
                                  getContacts: InjectionUseCase.provideGetContacts())
     }()
     

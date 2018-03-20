@@ -16,7 +16,7 @@ class TransferConverter {
         entry.guid     = UUID().uuidString
         entry.id       = entity.getId()
         entry.clientId = entity.getClientId()
-        entry.Value    = entity.getWalletValue()
+        entry.value    = entity.getWalletValue()
         entry.token    = entity.getToken()
         entry.date     = DateConverter.fromIso8601(dateStr: entity.getDate())!
         
@@ -26,7 +26,7 @@ class TransferConverter {
     static func convertFromEntryToEntity(_ entry: TransferEntry) -> Transfer {
         return Transfer(id: entry.id,
                         clientId: entry.clientId,
-                        walletValue: entry.Value,
+                        walletValue: entry.value,
                         token: entry.token,
                         date: DateConverter.fromIso8601(date: entry.date)!)
     }

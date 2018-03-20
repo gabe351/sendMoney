@@ -22,6 +22,7 @@ class ContactHistoryCell: UICollectionViewCell {
         contactImageView.image  = contactTransfer.image
         contactPhoneNumber.text = contactTransfer.phoneNumber
         contactMoneyValue.text  = contactTransfer.transferValue
+        contactNameLabel.text   = contactTransfer.name
         
         setupLayout()
     }

@@ -27,17 +27,21 @@ class HistoryPresenter: HistoryPresenterContract {
         getTransfer.all { (useCaseCallback) in
             
             useCaseCallback.onSuccess() { (result) in
-                if result.isEmpty {
-                    self.view.showNoHistory()
-                } else {
-                    let contactTransfers = self.buildContactTransfers(transfers: result)
-                    self.view.show(contactTransfers: contactTransfers)
-                }
+                
+                let contactTransfers = self.buildContactTransfers(transfers: result)
+                self.view.show(contactTransfers: contactTransfers)
+                
+            }
+            
+            useCaseCallback.onEmptyData {
+                self.view.showNoHistory()
             }
             
             useCaseCallback.onFailed() { (error) in
                 self.view.showErrorDialog()
             }
+            
+            
         }
     }
     
@@ -47,12 +51,18 @@ class HistoryPresenter: HistoryPresenterContract {
         
         for transfer in transfers {
             let contact = self.getContacts.findBy(id: transfer.getClientId())
+            let dateFromString = DateConverter.fromIso8601(dateStr: transfer.getDate())!
             
             contactTransfers.append(ContactTransferDto(image: getImageBy(id: contact.id),
                                                        name: contact.name,
                                                        phoneNumber: contact.phoneNumber,
-                                                       transferValue: "R$ \(transfer.getWalletValue())"))
+                                                       transferValue: "R$ \(transfer.getWalletValue())",
+                                                       date: dateFromString))                        
         }
+        
+        contactTransfers.sort(by: { (contact1, contact2) -> Bool in
+            return contact1.date.compare(contact2.date) == ComparisonResult.orderedDescending            
+        })
         
         return contactTransfers
     }

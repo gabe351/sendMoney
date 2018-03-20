@@ -16,5 +16,7 @@ protocol TransferLocalDataSource {
     
     func findValueBy(contactId: Int) -> Float
     
-    func allTransferBy(contactId: Int) -> [Transfer]            
+    func allTransferBy(contactId: Int) -> [Transfer]
+    
+    func destroyAll()
 }

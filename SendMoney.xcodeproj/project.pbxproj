@@ -281,6 +281,7 @@
 		0437EFE2205D30580049B214 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				F4C436FC205EE240008C6EC9 /* SaveContacts.swift */,
 				0437EFE3205D305E0049B214 /* GetAuth.swift */,
 				0437EFEB205D35F30049B214 /* SaveSessionToken.swift */,
 			);
@@ -732,7 +733,6 @@
 		F4C436FB205EE22E008C6EC9 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				F4C436FC205EE240008C6EC9 /* SaveContacts.swift */,
 				F4C43700205EEDFC008C6EC9 /* GetContacts.swift */,
 			);
 			path = UseCase;

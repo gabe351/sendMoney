@@ -21,7 +21,8 @@ class HomeViewController: UIViewController {
     lazy var presenter: HomePresenterContract = {
         return HomePresenter(view: self,
                              getAuth: InjectionUseCase.provideGetAuth(),
-                             saveSessionToken: InjectionUseCase.provideSaveSesstionToken())
+                             saveSessionToken: InjectionUseCase.provideSaveSesstionToken(),
+                             saveContacts: InjectionUseCase.provideSaveContacts())
     }()
     
     override func viewDidLoad() {
