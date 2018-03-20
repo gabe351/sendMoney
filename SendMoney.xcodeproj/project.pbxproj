@@ -424,8 +424,8 @@
 		0437F03E205E9A6B0049B214 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				0437F049205EB4B90049B214 /* Cell */,
-				0437F03F205E9A810049B214 /* HistoryCollectionView.swift */,
+				04AC51AE206126100084AFC8 /* Graph */,
+				04AC51AD206125ED0084AFC8 /* ContactHistory */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -585,6 +585,22 @@
 				0496AB7C206091D400428806 /* TransferRepositoryImpl.swift */,
 			);
 			path = Transfer;
+			sourceTree = "<group>";
+		};
+		04AC51AD206125ED0084AFC8 /* ContactHistory */ = {
+			isa = PBXGroup;
+			children = (
+				0437F049205EB4B90049B214 /* Cell */,
+				0437F03F205E9A810049B214 /* HistoryCollectionView.swift */,
+			);
+			path = ContactHistory;
+			sourceTree = "<group>";
+		};
+		04AC51AE206126100084AFC8 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		04B1C9E4205F389C00C71860 /* Transfer */ = {

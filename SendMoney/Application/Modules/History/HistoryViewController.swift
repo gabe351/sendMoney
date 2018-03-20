@@ -21,8 +21,6 @@ public class HistoryViewController: UIViewController {
     
     @IBOutlet weak var localLoader: UIActivityIndicatorView!
     
-    @IBOutlet weak var graphView: UIView!
-    
     lazy var presenter: HistoryPresenterContract = {
         return HistoryPresenter(view: self,
                                 getTransfer: InjectionUseCase.provideGetTransfer(),
@@ -69,7 +67,7 @@ extension HistoryViewController: HistoryViewContract {
         hideLoader()
         emptyDataContentView.isHidden  = false
         historyCollectionView.isHidden = true
-        graphView.isHidden             = true
+//        graphView.isHidden             = true
     }
     
     func showErrorDialog() {

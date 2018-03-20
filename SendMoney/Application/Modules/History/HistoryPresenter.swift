@@ -57,7 +57,7 @@ class HistoryPresenter: HistoryPresenterContract {
                                                        name: contact.name,
                                                        phoneNumber: contact.phoneNumber,
                                                        transferValue: "R$ \(transfer.getWalletValue())",
-                                                       date: dateFromString))                        
+                                                       date: dateFromString))
         }
         
         contactTransfers.sort(by: { (contact1, contact2) -> Bool in
