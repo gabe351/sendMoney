@@ -31,4 +31,8 @@ class InjectionUseCase {
     static func provideSendMoney() -> SendMoney {
         return SendMoney(remoteDataSource: InjectionRemoteDataSource.provideTransferRemoteDataSource())
     }
+    
+    static func provideGetTransfer() -> GetTransfer {
+        return GetTransfer(repository: InjectionRepository.provideHistoryRepository())
+    }
 }

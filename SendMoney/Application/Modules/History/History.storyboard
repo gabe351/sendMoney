@@ -82,8 +82,11 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5U-2B-Muz">
                                 <rect key="frame" x="0.0" y="83" width="375" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-77-5SJ">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C6u-5c-2yb"/>
@@ -92,7 +95,9 @@
                         <outlet property="backButton" destination="D1p-I7-iFz" id="H4t-H6-iBq"/>
                         <outlet property="emptyDataContentView" destination="BVD-P8-nIV" id="H1k-M4-SHQ"/>
                         <outlet property="emptyDataTitle" destination="aNk-sR-Yx2" id="8Mp-uD-6Mi"/>
+                        <outlet property="graphView" destination="u5U-2B-Muz" id="Hnm-5m-ekd"/>
                         <outlet property="historyCollectionView" destination="EfT-tb-CFS" id="3Zl-tY-StU"/>
+                        <outlet property="localLoader" destination="ddH-77-5SJ" id="X3I-o7-Mco"/>
                         <outlet property="refreshButton" destination="ZRA-KK-UdE" id="i26-SR-JWL"/>
                     </connections>
                 </viewController>

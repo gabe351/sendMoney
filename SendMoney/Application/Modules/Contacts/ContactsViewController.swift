@@ -33,8 +33,7 @@ public class ContactsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         contactsCollectionView.parentView = self
-        
-        
+                
     }
     
     public override func viewDidAppear(_ animated: Bool) {

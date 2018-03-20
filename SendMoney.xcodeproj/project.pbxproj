@@ -59,13 +59,14 @@
 		04639540205B5FF300258597 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463953F205B5FF300258597 /* ApiDataSource.swift */; };
 		04639542205B60CA00258597 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639541205B60CA00258597 /* BaseCallback.swift */; };
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
-		0496AB6F2060780500428806 /* TransfersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB6E2060780500428806 /* TransfersResponse.swift */; };
 		0496AB712060816300428806 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB702060816300428806 /* UIActivityIndicatorView.swift */; };
 		0496AB742060863A00428806 /* ToastBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB732060863A00428806 /* ToastBuilder.swift */; };
 		0496AB7720608CC300428806 /* ContactTransferDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB7620608CC300428806 /* ContactTransferDto.swift */; };
 		0496AB7B206091B400428806 /* TransferRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB7A206091B400428806 /* TransferRepository.swift */; };
 		0496AB7D206091D400428806 /* TransferRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB7C206091D400428806 /* TransferRepositoryImpl.swift */; };
 		0496AB7F206094B600428806 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB7E206094B600428806 /* HistoryPresenter.swift */; };
+		0496AB8120609B3900428806 /* InjectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB8020609B3900428806 /* InjectionRepository.swift */; };
+		0496AB8320609FCF00428806 /* TransferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB8220609FCF00428806 /* TransferResponse.swift */; };
 		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
 		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
 		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
@@ -164,13 +165,14 @@
 		0463953F205B5FF300258597 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
 		04639541205B60CA00258597 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
-		0496AB6E2060780500428806 /* TransfersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersResponse.swift; sourceTree = "<group>"; };
 		0496AB702060816300428806 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		0496AB732060863A00428806 /* ToastBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBuilder.swift; sourceTree = "<group>"; };
 		0496AB7620608CC300428806 /* ContactTransferDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTransferDto.swift; sourceTree = "<group>"; };
 		0496AB7A206091B400428806 /* TransferRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepository.swift; sourceTree = "<group>"; };
 		0496AB7C206091D400428806 /* TransferRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRepositoryImpl.swift; sourceTree = "<group>"; };
 		0496AB7E206094B600428806 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		0496AB8020609B3900428806 /* InjectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionRepository.swift; sourceTree = "<group>"; };
+		0496AB8220609FCF00428806 /* TransferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResponse.swift; sourceTree = "<group>"; };
 		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
 		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				0437EFF2205D38140049B214 /* InjectionUseCase.swift */,
 				0437EFF0205D37D90049B214 /* InjectionRemoteDataSource.swift */,
 				0437EFEE205D377B0049B214 /* InjectionLocalDataSource.swift */,
+				0496AB8020609B3900428806 /* InjectionRepository.swift */,
 			);
 			path = Injections;
 			sourceTree = "<group>";
@@ -412,7 +415,7 @@
 			children = (
 				0437F03A205E046E0049B214 /* Contact.swift */,
 				0437F03C205E057F0049B214 /* Transfer.swift */,
-				0496AB6E2060780500428806 /* TransfersResponse.swift */,
+				0496AB8220609FCF00428806 /* TransferResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1057,13 +1060,14 @@
 				F4C43703205EEF33008C6EC9 /* ContactsLocalDataSourceImpl.swift in Sources */,
 				F4C43710205F0429008C6EC9 /* TransferRemoteDataSource.swift in Sources */,
 				0437F03B205E046E0049B214 /* Contact.swift in Sources */,
-				0496AB6F2060780500428806 /* TransfersResponse.swift in Sources */,
+				0496AB8120609B3900428806 /* InjectionRepository.swift in Sources */,
 				0496AB7B206091B400428806 /* TransferRepository.swift in Sources */,
 				F4C436FD205EE240008C6EC9 /* SaveContacts.swift in Sources */,
 				0437F042205E9C9E0049B214 /* UIViewControllerExtension.swift in Sources */,
 				0437F029205DCAEC0049B214 /* ContactsCollectionView.swift in Sources */,
 				04C4D113205F5B7F00E4ABD0 /* GetTransfer.swift in Sources */,
 				0496AB742060863A00428806 /* ToastBuilder.swift in Sources */,
+				0496AB8320609FCF00428806 /* TransferResponse.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 				0437F001205D56140049B214 /* RoundedImageView.swift in Sources */,
 			);

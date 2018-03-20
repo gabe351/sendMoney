@@ -13,6 +13,9 @@ protocol HistoryViewContract {
     func show(contactTransfers: [ContactTransferDto])
     func showNoHistory()
     func showErrorDialog()
+    
+    func showLoader()
+    func hideLoader()
 }
 
 protocol HistoryPresenterContract {

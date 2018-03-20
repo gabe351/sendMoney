@@ -34,11 +34,7 @@ class HistoryCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
         cell.configureView(contactTransfer: contactTransfers[indexPath.row])
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        parentView?.goToHistoryDetail()
-    }
-    
+            
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

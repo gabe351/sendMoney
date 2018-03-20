@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireObjectMapper
 
 public class ApiDataSource {
     
@@ -27,7 +28,18 @@ public class ApiDataSource {
         }
     }
     
-    public static func requestWithJson(url: String, parameters: Parameters, method: HTTPMethod) {
-        
+    public static func requestTransfers(url: String, parameters: Parameters, method: HTTPMethod, _ loadCallback: @escaping (BaseCallback<[TransferResponse]>) -> Void) {
+        Alamofire.request(url, method: method, parameters: parameters).responseArray { (response: DataResponse<[TransferResponse]>) in
+            switch(response.result) {
+                
+            case .success(let response):
+                loadCallback(BaseCallback.success(response))
+                break
+                
+            case .failure(let error):
+                loadCallback(BaseCallback.failed(error: error))
+                break
+            }
+        }
     }
 }

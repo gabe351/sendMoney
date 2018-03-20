@@ -19,6 +19,16 @@ public class HistoryViewController: UIViewController {
     @IBOutlet weak var emptyDataContentView: UIView!
     @IBOutlet weak var historyCollectionView: HistoryCollectionView!
     
+    @IBOutlet weak var localLoader: UIActivityIndicatorView!
+    
+    @IBOutlet weak var graphView: UIView!
+    
+    lazy var presenter: HistoryPresenterContract = {
+        return HistoryPresenter(view: self,
+                                getTransfer: InjectionUseCase.provideGetTransfer(),
+                                getContacts: InjectionUseCase.provideGetContacts())
+    }()
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +38,7 @@ public class HistoryViewController: UIViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        HistoryRemoteDataSourceImpl().getHistory(token: SendMoneyApplication.getCurrentToken()!) { (callback) in
-            
-        }
+        presenter.loadContactTransfers()
     }
     
     @IBAction func backDidPressed(_ sender: Any) {
@@ -38,13 +46,16 @@ public class HistoryViewController: UIViewController {
     }
     
     @IBAction func refreshButtonDidPressed(_ sender: Any) {
-        
+        emptyDataContentView.isHidden = true
+        presenter.loadContactTransfers()
     }
     
     private func configureView() {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
         refreshButton.setImage(configureRefreshIconImage().image, for: .normal)
         historyCollectionView.parentView = self
+        localLoader.color = UIColor.lightBlue
+        localLoader.scale(factor: 2)
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
@@ -55,21 +66,38 @@ public class HistoryViewController: UIViewController {
 extension HistoryViewController: HistoryViewContract {
     
     func showNoHistory() {
-        
+        hideLoader()
+        emptyDataContentView.isHidden  = false
+        historyCollectionView.isHidden = true
+        graphView.isHidden             = true
     }
     
     func showErrorDialog() {
-        
+        hideLoader()
+        let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
+        customAlert.delegate = self
+        self.present(customAlert, animated: true, completion: nil)
     }
     
     func show(contactTransfers: [ContactTransferDto]) {
-        
+        hideLoader()
+        emptyDataContentView.isHidden          = true
+        historyCollectionView.isHidden         = false
+        historyCollectionView.contactTransfers = contactTransfers
+        historyCollectionView.reloadData()                
     }
-    
     
     func goToHistoryDetail() {
         let viewController = UIStoryboard.loadViewController() as HistoryDetailViewController
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func showLoader() {
+        localLoader.isHidden = false
+    }
+    
+    func hideLoader() {
+        localLoader.isHidden = true
     }
 }
 
@@ -82,6 +110,14 @@ extension HistoryViewController: StoryboardLoadable {
     
     static func storyboardIdentifier() -> String {
         return ID
+    }
+}
+
+//MARK Custom alert delgate
+extension HistoryViewController: CustomAlertDelegate {
+    func buttonDidPressed() {
+        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

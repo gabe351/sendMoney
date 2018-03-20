@@ -40,7 +40,7 @@ class TransferRepositoryImpl: TransferRepository {
             remoteCallback.onSuccess() { (response) in
                 //                TODO: IMPLEMENT
 //                localDataSource.saveMany(transfers: <#T##[Transfer]#>)
-//                loadCallback(BaseCallback.success(<#T##response: _##_#>))
+                loadCallback(BaseCallback.success([Transfer]()))
             }
             
             remoteCallback.onFailed() { (error) in

@@ -20,4 +20,8 @@ class InjectionLocalDataSource {
     static func provideContactsLocalDataSource() -> ContactsLocalDataSource {
         return ContactsLocalDataSourceImpl.getInstance(realm: realm)
     }
+    
+    static func provideTransferLocalDataSource() -> TransferLocalDataSource {
+        return TransferLocalDataSourceImpl.getInstance(realm: realm)
+    }
 }

@@ -23,6 +23,7 @@ class HistoryPresenter: HistoryPresenterContract {
     }
     
     func loadContactTransfers() {
+        view.showLoader()
         getTransfer.all { (useCaseCallback) in
             
             useCaseCallback.onSuccess() { (result) in
