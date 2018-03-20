@@ -10,6 +10,6 @@ import Foundation
 
 protocol HistoryRemoteDataSource {
     
-    func getHistory(token: String, _ loadCallback: @escaping (BaseCallback<Any>) -> Void)
+    func getHistory(token: String, _ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void)
     
 }

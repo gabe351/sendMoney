@@ -31,6 +31,14 @@ class TransferConverter {
                         date: DateConverter.fromIso8601(date: entry.date)!)
     }
     
+    static func convertFromResponseToEntity(_ response: TransferResponse) -> Transfer {
+        return Transfer(id: response.id!,
+                        clientId: response.clientId!,
+                        walletValue: response.walletValue!,
+                        token: response.token!,
+                        date: response.date!)
+    }
+    
     static func convertFromEntitesToEntries(entities: [Transfer]) -> [TransferEntry] {
         var entries = [TransferEntry]()
         
@@ -49,5 +57,16 @@ class TransferConverter {
         }
         
         return entities
-    }        
+    }
+    
+    static func convertFromResponsesToEntities(_ responses: [TransferResponse]) -> [Transfer] {
+        var entities = [Transfer]()
+        
+        for response in responses {
+            let entity = convertFromResponseToEntity(response)
+            entities.append(entity)
+        }
+        
+        return entities
+    }
 }
