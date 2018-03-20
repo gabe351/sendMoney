@@ -30,13 +30,12 @@ class SendMoneyPresenter: SendMoneyPresenterContract {
         sendMoney.transfer(parameters: transfer.asBodyParameters()) { (useCaseCallback) in
             
             useCaseCallback.onSuccess() { (response) in
-                self.view.hideLoader()
-                self.view.showSuccess()
+                self.view.showSuccess()                
             }
             
             useCaseCallback.onFailed() { (error) in
                 self.view.hideLoader()
-                //               TODO - Display error
+                self.view.showErrorDialog()
             }
         }
     }

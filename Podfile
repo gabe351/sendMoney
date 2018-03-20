@@ -7,6 +7,7 @@ target 'SendMoney' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'Toast-Swift', git: 'https://github.com/scalessec/Toast-Swift.git', branch: 'feature/Swift-4'
   pod 'UIColor_Hex_Swift', '~> 4.0.1'
   pod 'RealmSwift', '~> 2.10.1'
 

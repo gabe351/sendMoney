@@ -18,7 +18,7 @@ class CustomUIAlertViewController: UIViewController {
     public static let ID       = "CustomUIAlertId"
     
     var delegate: CustomAlertDelegate?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

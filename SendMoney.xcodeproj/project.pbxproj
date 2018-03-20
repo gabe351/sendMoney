@@ -61,6 +61,7 @@
 		04639545205B612900258597 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04639544205B612900258597 /* CallbackEnum.swift */; };
 		0496AB6F2060780500428806 /* TransfersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB6E2060780500428806 /* TransfersResponse.swift */; };
 		0496AB712060816300428806 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB702060816300428806 /* UIActivityIndicatorView.swift */; };
+		0496AB742060863A00428806 /* ToastBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB732060863A00428806 /* ToastBuilder.swift */; };
 		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
 		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
 		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
@@ -161,6 +162,7 @@
 		04639544205B612900258597 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
 		0496AB6E2060780500428806 /* TransfersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersResponse.swift; sourceTree = "<group>"; };
 		0496AB702060816300428806 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		0496AB732060863A00428806 /* ToastBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBuilder.swift; sourceTree = "<group>"; };
 		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
 		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				0437F00D205D8A270049B214 /* ConfigureViews.swift */,
+				0496AB732060863A00428806 /* ToastBuilder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				0437F042205E9C9E0049B214 /* UIViewControllerExtension.swift in Sources */,
 				0437F029205DCAEC0049B214 /* ContactsCollectionView.swift in Sources */,
 				04C4D113205F5B7F00E4ABD0 /* GetHistory.swift in Sources */,
+				0496AB742060863A00428806 /* ToastBuilder.swift in Sources */,
 				F4049B42205C04BA00434B9E /* RoundedBlueButton.swift in Sources */,
 				0437F001205D56140049B214 /* RoundedImageView.swift in Sources */,
 			);

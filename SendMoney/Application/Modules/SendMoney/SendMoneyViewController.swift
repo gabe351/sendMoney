@@ -43,10 +43,14 @@ class SendMoneyViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func sendDidPressed(_ sender: Any) {
-                    
+        
+        if valueTextField.text!.isEmpty {
+            ToastBuilder(message: "Por favor, informe o valor", view: self.view).show()
+            return
+        }
+        
         presenter.sendMoney(clientId: (contact?.id)!,
                             value: (valueTextField.text! as NSString).floatValue)
-        
     }
     
     private func prepareWith(contact: Contact) {
@@ -77,11 +81,17 @@ extension SendMoneyViewController: SendMoneyViewContract {
     }
     
     func showSuccess() {
-        self.dismiss(animated: true, completion: nil)
+        ToastBuilder(message: "Enviado com sucesso", view: self.view).with(block: { (didTapped) in
+          self.dismiss(animated: true, completion: nil)
+        }).with(position: .center).with(durationInSeconds: 0.8)
+            .show()
+        localLoder.isHidden = true
     }
     
     func showErrorDialog() {
-        
+        let customAlert = loadNibNamed(CustomUIAlertViewController.NIB_NAME, owner: self)! as CustomUIAlertViewController
+        customAlert.delegate = self
+        self.present(customAlert, animated: true, completion: nil)
     }
     
     
@@ -96,4 +106,13 @@ extension SendMoneyViewController: StoryboardLoadable {
     static func storyboardIdentifier() -> String {
         return ID
     }    
+}
+
+//MARK Custom alert delgate
+extension SendMoneyViewController: CustomAlertDelegate {
+    func buttonDidPressed() {        
+        localLoder.isHidden = true
+        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
 }
