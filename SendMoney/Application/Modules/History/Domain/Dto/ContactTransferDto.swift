@@ -9,9 +9,10 @@
 import UIKit
 
 struct ContactTransferDto {
+    let id:            Int
     let image:         UIImage
     let name:          String
     let phoneNumber:   String
     let transferValue: String
-    let date         : Date
+    let date:          Date
 }

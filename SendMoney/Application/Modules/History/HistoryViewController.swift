@@ -19,6 +19,7 @@ public class HistoryViewController: UIViewController {
     @IBOutlet weak var emptyDataContentView: UIView!
     @IBOutlet weak var historyCollectionView: HistoryCollectionView!
     
+    @IBOutlet weak var graphCollectionView: GraphCollectionView!
     @IBOutlet weak var localLoader: UIActivityIndicatorView!
     
     lazy var presenter: HistoryPresenterContract = {
@@ -52,6 +53,7 @@ public class HistoryViewController: UIViewController {
         backButton.setImage(configureBackButtonImage().image, for: .normal)
         refreshButton.setImage(configureRefreshIconImage().image, for: .normal)
         historyCollectionView.parentView = self
+        graphCollectionView.parentView   = self
         localLoader.color = UIColor.lightBlue
         localLoader.scale(factor: 2)
     }
@@ -67,7 +69,7 @@ extension HistoryViewController: HistoryViewContract {
         hideLoader()
         emptyDataContentView.isHidden  = false
         historyCollectionView.isHidden = true
-//        graphView.isHidden             = true
+        graphCollectionView.isHidden   = true
     }
     
     func showErrorDialog() {
@@ -81,11 +83,25 @@ extension HistoryViewController: HistoryViewContract {
         hideLoader()
         emptyDataContentView.isHidden          = true
         historyCollectionView.isHidden         = false
+        graphCollectionView.isHidden           = false
         historyCollectionView.contactTransfers = contactTransfers
-        historyCollectionView.reloadData()                
+        historyCollectionView.reloadData()
+        
+        if !contactTransfers.isEmpty {
+            presenter.loadGraphDataBy(contactTransfers: contactTransfers)
+        }
     }
     
-    func goToHistoryDetail() {
+    func show(graph: [ContactGraphDto]) {
+        hideLoader()
+        emptyDataContentView.isHidden    = true
+        historyCollectionView.isHidden   = false
+        graphCollectionView.isHidden     = false
+        graphCollectionView.contacsGraph = graph
+        graphCollectionView.reloadData()
+    }
+        
+    func goToHistoryDetail(contactId: Int) {
         let viewController = UIStoryboard.loadViewController() as HistoryDetailViewController
         self.present(viewController, animated: true, completion: nil)
     }

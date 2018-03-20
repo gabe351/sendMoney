@@ -9,8 +9,9 @@
 import Foundation
 
 protocol HistoryViewContract {
-    func goToHistoryDetail()
+    func goToHistoryDetail(contactId: Int)
     func show(contactTransfers: [ContactTransferDto])
+    func show(graph: [ContactGraphDto])
     func showNoHistory()
     func showErrorDialog()
     
@@ -20,4 +21,5 @@ protocol HistoryViewContract {
 
 protocol HistoryPresenterContract {
     func loadContactTransfers()
+    func loadGraphDataBy(contactTransfers: [ContactTransferDto])
 }

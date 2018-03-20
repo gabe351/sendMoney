@@ -50,22 +50,15 @@ public class TransferLocalDataSourceImpl: TransferLocalDataSource {
         return TransferConverter.convertFromEntriesToEntities(entries: entries)
     }
     
-    func findValueBy(contactId: Int) -> Float {
-        var contactValue = Float()
-        let predicate = NSPredicate(format: "contactId = %@", contactId)
+    func findValueBy(contactId: Int) -> Float {        
+        let predicate = NSPredicate(format: "clientId = \(contactId)")
         let entries = Array(realm.objects(TransferEntry.self).filter(predicate))
         
-        for entry in entries {
-            contactValue += entry.value
-        }
-        
-        let valueFull = entries.reduce(0, { (value, entry) in
+        let totalValue = entries.reduce(0, { (value, entry) in
             value + entry.value
         })
-        
-        
-        
-        return contactValue
+                        
+        return totalValue
     }
     
     func allTransferBy(contactId: Int) -> [Transfer] {
@@ -77,7 +70,12 @@ public class TransferLocalDataSourceImpl: TransferLocalDataSource {
     }
     
     func destroyAll() {
-        let entries = realm.objects(TransferEntry.self)
-        realm.delete(entries)
+        
+        do {
+            try realm.write {
+                let entries = realm.objects(TransferEntry.self)
+                realm.delete(entries)
+            }
+        } catch { }
     }
 }

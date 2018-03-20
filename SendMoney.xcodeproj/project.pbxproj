@@ -67,6 +67,11 @@
 		0496AB7F206094B600428806 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB7E206094B600428806 /* HistoryPresenter.swift */; };
 		0496AB8120609B3900428806 /* InjectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB8020609B3900428806 /* InjectionRepository.swift */; };
 		0496AB8320609FCF00428806 /* TransferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496AB8220609FCF00428806 /* TransferResponse.swift */; };
+		04AC51B0206126940084AFC8 /* GraphCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51AF206126940084AFC8 /* GraphCollectionView.swift */; };
+		04AC51B3206126F20084AFC8 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51B2206126F20084AFC8 /* GraphCell.swift */; };
+		04AC51B5206127420084AFC8 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC51B4206127420084AFC8 /* GraphCell.xib */; };
+		04AC51B7206128810084AFC8 /* ContactGraphDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51B6206128810084AFC8 /* ContactGraphDto.swift */; };
+		04AC51B9206131D10084AFC8 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51B8206131D10084AFC8 /* ArrayExtension.swift */; };
 		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
 		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
 		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
@@ -173,6 +178,11 @@
 		0496AB7E206094B600428806 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		0496AB8020609B3900428806 /* InjectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionRepository.swift; sourceTree = "<group>"; };
 		0496AB8220609FCF00428806 /* TransferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResponse.swift; sourceTree = "<group>"; };
+		04AC51AF206126940084AFC8 /* GraphCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCollectionView.swift; sourceTree = "<group>"; };
+		04AC51B2206126F20084AFC8 /* GraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
+		04AC51B4206127420084AFC8 /* GraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphCell.xib; sourceTree = "<group>"; };
+		04AC51B6206128810084AFC8 /* ContactGraphDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGraphDto.swift; sourceTree = "<group>"; };
+		04AC51B8206131D10084AFC8 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
 		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -566,6 +576,7 @@
 			isa = PBXGroup;
 			children = (
 				0496AB7620608CC300428806 /* ContactTransferDto.swift */,
+				04AC51B6206128810084AFC8 /* ContactGraphDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -599,8 +610,19 @@
 		04AC51AE206126100084AFC8 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				04AC51B1206126E30084AFC8 /* Cell */,
+				04AC51AF206126940084AFC8 /* GraphCollectionView.swift */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		04AC51B1206126E30084AFC8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04AC51B2206126F20084AFC8 /* GraphCell.swift */,
+				04AC51B4206127420084AFC8 /* GraphCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		04B1C9E4205F389C00C71860 /* Transfer */ = {
@@ -706,6 +728,7 @@
 				0437F00F205D8EEC0049B214 /* UIDeviceExtension.swift */,
 				0437F041205E9C9E0049B214 /* UIViewControllerExtension.swift */,
 				0496AB702060816300428806 /* UIActivityIndicatorView.swift */,
+				04AC51B8206131D10084AFC8 /* ArrayExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -876,6 +899,7 @@
 				0437F019205DB08B0049B214 /* CustomUIAlert.xib in Resources */,
 				0437F04D205EB5730049B214 /* ContactHistoryCell.xib in Resources */,
 				0437F00B205D5C5D0049B214 /* History.storyboard in Resources */,
+				04AC51B5206127420084AFC8 /* GraphCell.xib in Resources */,
 				0437F034205DD9B60049B214 /* SendMoney.storyboard in Resources */,
 				04639536205B58C400258597 /* Home.storyboard in Resources */,
 				0437F02E205DCC0F0049B214 /* ContactCell.xib in Resources */,
@@ -1012,11 +1036,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0437F045205E9E010049B214 /* HistoryDetailViewController.swift in Sources */,
+				04AC51B0206126940084AFC8 /* GraphCollectionView.swift in Sources */,
 				0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */,
 				0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */,
 				F4C436FF205EEC53008C6EC9 /* ContactListUtils.swift in Sources */,
 				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
+				04AC51B3206126F20084AFC8 /* GraphCell.swift in Sources */,
 				0437F026205DBEF70049B214 /* HomeCustomAlertDelegate.swift in Sources */,
 				04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */,
 				F4C4370D205F03B1008C6EC9 /* SendMoney.swift in Sources */,
@@ -1028,6 +1054,7 @@
 				F4C436F6205EE06D008C6EC9 /* ContactEntry.swift in Sources */,
 				0437EFF1205D37D90049B214 /* InjectionRemoteDataSource.swift in Sources */,
 				042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */,
+				04AC51B7206128810084AFC8 /* ContactGraphDto.swift in Sources */,
 				0437F050205EB6EE0049B214 /* HistoryDetailCollectionView.swift in Sources */,
 				0437F036205E020C0049B214 /* ContactsContract.swift in Sources */,
 				0437EFE0205D30020049B214 /* HomePresenter.swift in Sources */,
@@ -1052,6 +1079,7 @@
 				0437EFEF205D377B0049B214 /* InjectionLocalDataSource.swift in Sources */,
 				04C4D10F205F590100E4ABD0 /* HistoryRemoteDataSourceImpl.swift in Sources */,
 				F4C436F4205EE03B008C6EC9 /* Entry.swift in Sources */,
+				04AC51B9206131D10084AFC8 /* ArrayExtension.swift in Sources */,
 				F4C43709205F01FD008C6EC9 /* SendMoneyContract.swift in Sources */,
 				0437EFE8205D34590049B214 /* SessionLocalDataSource.swift in Sources */,
 				0496AB7F206094B600428806 /* HistoryPresenter.swift in Sources */,

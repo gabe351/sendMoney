@@ -19,5 +19,9 @@ class GetTransfer {
     func all(_ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void) {
         repository.all(loadCallback)
     }
+    
+    func totalValueBy(contactId: Int) -> Float {
+        return repository.totalValueBy(contactId: contactId)
+    }
 }
 

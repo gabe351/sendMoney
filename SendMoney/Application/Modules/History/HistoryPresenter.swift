@@ -45,15 +45,36 @@ class HistoryPresenter: HistoryPresenterContract {
         }
     }
     
+    func loadGraphDataBy(contactTransfers: [ContactTransferDto]) {
+        
+        var contactsGraph = [ContactGraphDto]()
+        
+        for contactTransfer in contactTransfers {
+            let totalValue = getTransfer.totalValueBy(contactId: contactTransfer.id)
+            
+            let contactGraph = ContactGraphDto(id: contactTransfer.id,
+                                               name: contactTransfer.name,
+                                               image: getImageBy(id: contactTransfer.id),
+                                               totalValue: "R$ \(totalValue)")
+            contactsGraph.append(contactGraph)
+        }
+        
+        let ilteredContactsGraph = contactsGraph.filterDuplicates{ $0.id == $1.id }
+        
+        
+
+        view.show(graph: ilteredContactsGraph)
+    }
+    
     private func buildContactTransfers(transfers: [Transfer]) -> [ContactTransferDto] {
         
         var contactTransfers = [ContactTransferDto]()
-        
         for transfer in transfers {
             let contact = self.getContacts.findBy(id: transfer.getClientId())
             let dateFromString = DateConverter.fromIso8601(dateStr: transfer.getDate())!
             
-            contactTransfers.append(ContactTransferDto(image: getImageBy(id: contact.id),
+            contactTransfers.append(ContactTransferDto(id: contact.id,
+                                                       image: getImageBy(id: contact.id),
                                                        name: contact.name,
                                                        phoneNumber: contact.phoneNumber,
                                                        transferValue: "R$ \(transfer.getWalletValue())",

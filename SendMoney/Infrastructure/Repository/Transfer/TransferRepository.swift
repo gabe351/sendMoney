@@ -10,4 +10,7 @@ import Foundation
 
 protocol TransferRepository {
     func all(_ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void)
+    
+    func totalValueBy(contactId: Int) -> Float
+    
 }

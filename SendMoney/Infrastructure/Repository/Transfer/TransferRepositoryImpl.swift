@@ -35,13 +35,18 @@ class TransferRepositoryImpl: TransferRepository {
         INSTANCE = nil
     }
     
+    func totalValueBy(contactId: Int) -> Float {
+        return localDataSource.findValueBy(contactId: contactId)
+    }
+    
     func all(_ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void) {
         remoteDataSource.getHistory(token: SendMoneyApplication.getCurrentToken()!) { (remoteCallback) in
             remoteCallback.onSuccess() { (transfers) in
                 
                 if transfers.isEmpty {
                     loadCallback(BaseCallback.emptyData())
-                } else {                    
+                } else {
+                    self.localDataSource.destroyAll()
                     let _ = self.localDataSource.saveMany(transfers: transfers)
                     loadCallback(BaseCallback.success(transfers))
                 }

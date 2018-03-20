@@ -79,11 +79,11 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-x9-Q3d">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-x9-Q3d" customClass="GraphCollectionView" customModule="SendMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="83" width="375" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M0c-eo-94T">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M0c-eo-94T">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -103,6 +103,7 @@
                         <outlet property="backButton" destination="D1p-I7-iFz" id="H4t-H6-iBq"/>
                         <outlet property="emptyDataContentView" destination="BVD-P8-nIV" id="H1k-M4-SHQ"/>
                         <outlet property="emptyDataTitle" destination="aNk-sR-Yx2" id="8Mp-uD-6Mi"/>
+                        <outlet property="graphCollectionView" destination="HOG-x9-Q3d" id="v5h-fF-B7W"/>
                         <outlet property="historyCollectionView" destination="EfT-tb-CFS" id="3Zl-tY-StU"/>
                         <outlet property="localLoader" destination="ddH-77-5SJ" id="X3I-o7-Mco"/>
                         <outlet property="refreshButton" destination="ZRA-KK-UdE" id="i26-SR-JWL"/>
