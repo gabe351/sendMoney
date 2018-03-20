@@ -103,6 +103,7 @@ extension HistoryViewController: HistoryViewContract {
         
     func goToHistoryDetail(contactId: Int) {
         let viewController = UIStoryboard.loadViewController() as HistoryDetailViewController
+        viewController.contactId = contactId
         self.present(viewController, animated: true, completion: nil)
     }
     

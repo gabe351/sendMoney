@@ -10,6 +10,8 @@ import UIKit
 
 class HistoryDetailCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    var transfers = [Transfer]()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -23,12 +25,12 @@ class HistoryDetailCollectionView: UICollectionView, UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return transfers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.dequeueReusableCell(withReuseIdentifier: HistoryDetailCell.ID, for: indexPath) as! HistoryDetailCell
-        cell.configureView()
+        cell.configureView(transfer: transfers[indexPath.row])
         return cell
     }
     

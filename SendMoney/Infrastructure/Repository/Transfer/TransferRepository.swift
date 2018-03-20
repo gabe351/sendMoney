@@ -13,4 +13,5 @@ protocol TransferRepository {
     
     func totalValueBy(contactId: Int) -> Float
     
+    func allTransferBy(contactId: Int) -> [Transfer]    
 }

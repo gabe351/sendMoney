@@ -72,6 +72,9 @@
 		04AC51B5206127420084AFC8 /* GraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC51B4206127420084AFC8 /* GraphCell.xib */; };
 		04AC51B7206128810084AFC8 /* ContactGraphDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51B6206128810084AFC8 /* ContactGraphDto.swift */; };
 		04AC51B9206131D10084AFC8 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51B8206131D10084AFC8 /* ArrayExtension.swift */; };
+		04AC51BB206134160084AFC8 /* HistoryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51BA206134160084AFC8 /* HistoryDetailPresenter.swift */; };
+		04AC51BD206134230084AFC8 /* HistoryDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51BC206134230084AFC8 /* HistoryDetailContract.swift */; };
+		04AC51C1206134690084AFC8 /* HistoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC51C0206134690084AFC8 /* HistoryDto.swift */; };
 		04B1C9E3205F364400C71860 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E2205F364400C71860 /* DateConverter.swift */; };
 		04B1C9E6205F38C800C71860 /* TransferLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */; };
 		04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */; };
@@ -183,6 +186,9 @@
 		04AC51B4206127420084AFC8 /* GraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphCell.xib; sourceTree = "<group>"; };
 		04AC51B6206128810084AFC8 /* ContactGraphDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGraphDto.swift; sourceTree = "<group>"; };
 		04AC51B8206131D10084AFC8 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		04AC51BA206134160084AFC8 /* HistoryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailPresenter.swift; sourceTree = "<group>"; };
+		04AC51BC206134230084AFC8 /* HistoryDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailContract.swift; sourceTree = "<group>"; };
+		04AC51C0206134690084AFC8 /* HistoryDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDto.swift; sourceTree = "<group>"; };
 		04B1C9E2205F364400C71860 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		04B1C9E5205F38C800C71860 /* TransferLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSource.swift; sourceTree = "<group>"; };
 		04B1C9E7205F395700C71860 /* TransferLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -443,9 +449,12 @@
 		0437F043205E9DCD0049B214 /* HistoryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				04AC51BE206134570084AFC8 /* Domain */,
 				0437F04E205EB6DE0049B214 /* CollectionView */,
 				0437F044205E9E010049B214 /* HistoryDetailViewController.swift */,
 				0437F046205E9E150049B214 /* HistoryDetail.storyboard */,
+				04AC51BA206134160084AFC8 /* HistoryDetailPresenter.swift */,
+				04AC51BC206134230084AFC8 /* HistoryDetailContract.swift */,
 			);
 			path = HistoryDetail;
 			sourceTree = "<group>";
@@ -623,6 +632,22 @@
 				04AC51B4206127420084AFC8 /* GraphCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		04AC51BE206134570084AFC8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				04AC51BF2061345C0084AFC8 /* Dto */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		04AC51BF2061345C0084AFC8 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				04AC51C0206134690084AFC8 /* HistoryDto.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		04B1C9E4205F389C00C71860 /* Transfer */ = {
@@ -1039,6 +1064,7 @@
 				04AC51B0206126940084AFC8 /* GraphCollectionView.swift in Sources */,
 				0437F010205D8EEC0049B214 /* UIDeviceExtension.swift in Sources */,
 				0437F01B205DB28B0049B214 /* RoundedView.swift in Sources */,
+				04AC51BB206134160084AFC8 /* HistoryDetailPresenter.swift in Sources */,
 				F4C436FF205EEC53008C6EC9 /* ContactListUtils.swift in Sources */,
 				0437F020205DB8B60049B214 /* HomeStoryboardLoadable.swift in Sources */,
 				04639545205B612900258597 /* CallbackEnum.swift in Sources */,
@@ -1092,9 +1118,11 @@
 				F4C43707205EF303008C6EC9 /* ContactsPresenter.swift in Sources */,
 				F4C436F8205EE140008C6EC9 /* TransferEntry.swift in Sources */,
 				04B1C9EA205F39AA00C71860 /* TransferConverter.swift in Sources */,
+				04AC51C1206134690084AFC8 /* HistoryDto.swift in Sources */,
 				F4C43714205F0744008C6EC9 /* SendMoneyPresenter.swift in Sources */,
 				04B1C9E8205F395700C71860 /* TransferLocalDataSourceImpl.swift in Sources */,
 				04639542205B60CA00258597 /* BaseCallback.swift in Sources */,
+				04AC51BD206134230084AFC8 /* HistoryDetailContract.swift in Sources */,
 				04639540205B5FF300258597 /* ApiDataSource.swift in Sources */,
 				F4C436F1205EDD25008C6EC9 /* ContactsLocalDataSource.swift in Sources */,
 				0437F024205DBEC90049B214 /* CustomAlertDelegate.swift in Sources */,

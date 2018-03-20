@@ -20,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 120,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HA-pl-fyv">
-                        <rect key="frame" x="10" y="2.2105514683440788" width="139.00000000000003" height="20.999999999999993"/>
+                        <rect key="frame" x="10" y="2" width="131" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <color key="textColor" red="0.1291496456" green="0.65468889470000002" blue="0.65471571679999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10/11/1994" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAq-NY-GMd">
-                        <rect key="frame" x="149" y="2" width="81" height="21"/>
+                        <rect key="frame" x="138" y="2" width="92" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.1176470588" green="0.70588235290000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,7 +37,11 @@
             </view>
             <viewLayoutGuide key="safeArea" id="jtC-GX-YgP"/>
             <size key="customSize" width="369" height="37"/>
-            <point key="canvasLocation" x="-29" y="-68"/>
+            <connections>
+                <outlet property="transferDate" destination="CAq-NY-GMd" id="W8B-Bx-VJc"/>
+                <outlet property="transferValue" destination="1HA-pl-fyv" id="iwi-fa-m0J"/>
+            </connections>
+            <point key="canvasLocation" x="-29" y="-68.5"/>
         </collectionViewCell>
     </objects>
 </document>

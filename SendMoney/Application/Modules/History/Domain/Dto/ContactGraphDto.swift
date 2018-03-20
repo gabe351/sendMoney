@@ -12,5 +12,5 @@ struct ContactGraphDto {
     let id:         Int
     let name:       String
     let image:      UIImage
-    let totalValue: String
+    let totalValue: Float
 }

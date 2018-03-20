@@ -91,6 +91,7 @@
                         <outlet property="contactImageView" destination="tCX-yX-Lki" id="eZv-EN-YSC"/>
                         <outlet property="contactNameLabel" destination="Pb1-VU-z2p" id="Xxp-VG-gDE"/>
                         <outlet property="contactPhoneNumberLabel" destination="fE5-J2-3dh" id="j8H-Zh-dgs"/>
+                        <outlet property="historyDetailCollectionView" destination="Ldv-wl-acz" id="G6I-HE-Jxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdT-wY-wXc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,5 +23,9 @@ class GetTransfer {
     func totalValueBy(contactId: Int) -> Float {
         return repository.totalValueBy(contactId: contactId)
     }
+    
+    func allTransfersBy(contactId: Int) -> [Transfer] {
+        return repository.allTransferBy(contactId: contactId) 
+    }
 }
 

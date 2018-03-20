@@ -62,7 +62,7 @@ public class TransferLocalDataSourceImpl: TransferLocalDataSource {
     }
     
     func allTransferBy(contactId: Int) -> [Transfer] {
-        let predicate = NSPredicate(format: "contactId = %@", contactId)
+        let predicate = NSPredicate(format: "clientId = \(contactId)")
         
         let entries = Array(realm.objects(TransferEntry.self).filter(predicate))
         

@@ -24,6 +24,13 @@ public class DateConverter {
         return nil
     }
     
+    public static func buildDateOnBrazilianFormat(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        return dateFormatter.string(from: date)
+    }
+            
     public static func fromIso8601(date: Date?) -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"

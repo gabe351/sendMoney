@@ -21,7 +21,7 @@ class GraphCell: UICollectionViewCell {
         
         contactImageView.image = contactGraph.image
         contactNameLabel.text  = contactGraph.name
-        contactValueSent.text  = contactGraph.totalValue
+        contactValueSent.text  = "R$ \(contactGraph.totalValue)"
     }
     
     func setUpLayout() {

@@ -39,6 +39,10 @@ class TransferRepositoryImpl: TransferRepository {
         return localDataSource.findValueBy(contactId: contactId)
     }
     
+    func allTransferBy(contactId: Int) -> [Transfer] {
+        return localDataSource.allTransferBy(contactId: contactId)
+    }
+    
     func all(_ loadCallback: @escaping (BaseCallback<[Transfer]>) -> Void) {
         remoteDataSource.getHistory(token: SendMoneyApplication.getCurrentToken()!) { (remoteCallback) in
             remoteCallback.onSuccess() { (transfers) in

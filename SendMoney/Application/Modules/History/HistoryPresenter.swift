@@ -30,7 +30,6 @@ class HistoryPresenter: HistoryPresenterContract {
                 
                 let contactTransfers = self.buildContactTransfers(transfers: result)
                 self.view.show(contactTransfers: contactTransfers)
-                
             }
             
             useCaseCallback.onEmptyData {
@@ -55,15 +54,14 @@ class HistoryPresenter: HistoryPresenterContract {
             let contactGraph = ContactGraphDto(id: contactTransfer.id,
                                                name: contactTransfer.name,
                                                image: getImageBy(id: contactTransfer.id),
-                                               totalValue: "R$ \(totalValue)")
+                                               totalValue: totalValue)
             contactsGraph.append(contactGraph)
         }
         
         let ilteredContactsGraph = contactsGraph.filterDuplicates{ $0.id == $1.id }
-        
-        
+        let sortedArray = ilteredContactsGraph.sorted(by: { $0.totalValue > $1.totalValue })
 
-        view.show(graph: ilteredContactsGraph)
+        view.show(graph: sortedArray)
     }
     
     private func buildContactTransfers(transfers: [Transfer]) -> [ContactTransferDto] {
