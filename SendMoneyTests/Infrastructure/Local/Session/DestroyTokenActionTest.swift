@@ -21,14 +21,14 @@ class destroyTokenActionTest: QuickSpec {
             let token = "my-destroy-test-token"
             let key   = "my-key-to-destroy"
             
-            context("when save was called") {
+            context("when destroy existing token") {
                 
                 beforeEach {
                     localDataSource.save(token: token, key)
                     localDataSource.destroyBy(key: key)
                 }
                 
-                it("Should get same token") {
+                it("Should get none token") {
                     expect(localDataSource.getTokenBy(key: key)).to(beNil())
                 }
             }
