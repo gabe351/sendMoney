@@ -18,7 +18,7 @@ class TransferConverter {
         entry.clientId = entity.getClientId()
         entry.value    = entity.getWalletValue()
         entry.token    = entity.getToken()
-        entry.date     = DateConverter.fromIso8601(dateStr: entity.getDate())!
+        entry.date     = defaultDateIfNil(DateConverter.fromIso8601(dateStr: entity.getDate()))
         
         return entry
     }
@@ -28,15 +28,16 @@ class TransferConverter {
                         clientId: entry.clientId,
                         walletValue: entry.value,
                         token: entry.token,
-                        date: DateConverter.fromIso8601(date: entry.date)!)
+                        date: defaultStringIfNil(DateConverter.fromIso8601(date: entry.date)))
     }
     
     static func convertFromResponseToEntity(_ response: TransferResponse) -> Transfer {
-        return Transfer(id: response.id!,
-                        clientId: response.clientId!,
-                        walletValue: response.walletValue!,
-                        token: response.token!,
-                        date: response.date!)
+        
+        return Transfer(id: defaultIntIfNil(response.id),
+                        clientId: defaultIntIfNil(response.clientId),
+                        walletValue: defaultFloatIfNil(response.walletValue),
+                        token: defaultStringIfNil(response.token),
+                        date: defaultStringIfNil(response.date))
     }
     
     static func convertFromEntitesToEntries(entities: [Transfer]) -> [TransferEntry] {

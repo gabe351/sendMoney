@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401DDDA20816E7F00626C71 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401DDD920816E7F00626C71 /* DefaultValues.swift */; };
 		042F1507205B3EB000F57795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F1506205B3EB000F57795 /* AppDelegate.swift */; };
 		042F150E205B3EB000F57795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042F150D205B3EB000F57795 /* Assets.xcassets */; };
 		042F1511205B3EB000F57795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042F150F205B3EB000F57795 /* LaunchScreen.storyboard */; };
@@ -122,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401DDD920816E7F00626C71 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		042F1503205B3EB000F57795 /* SendMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042F1506205B3EB000F57795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042F150D205B3EB000F57795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -817,6 +819,7 @@
 			children = (
 				F4C43704205EEFE9008C6EC9 /* ContactConverter.swift */,
 				04B1C9E9205F39AA00C71860 /* TransferConverter.swift */,
+				0401DDD920816E7F00626C71 /* DefaultValues.swift */,
 			);
 			path = Converters;
 			sourceTree = "<group>";
@@ -1109,6 +1112,7 @@
 				F4C4370D205F03B1008C6EC9 /* SendMoney.swift in Sources */,
 				0437F007205D5C480049B214 /* HistoryViewController.swift in Sources */,
 				0437F02C205DCBD40049B214 /* ContactCell.swift in Sources */,
+				0401DDDA20816E7F00626C71 /* DefaultValues.swift in Sources */,
 				0437F057205EBB0F0049B214 /* HistoryContract.swift in Sources */,
 				0437F03D205E057F0049B214 /* Transfer.swift in Sources */,
 				F4049B3F205BFBF800434B9E /* AuthenticateRemoteDataSource.swift in Sources */,
