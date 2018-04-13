@@ -23,7 +23,7 @@ class GetTokenActionTest: QuickSpec {
             let token = "my-test-token"
             let key   = "my-key"
             
-            context("when save was called") {
+            context("when get saved token") {
                 
                 var result = ""
                 
@@ -35,7 +35,7 @@ class GetTokenActionTest: QuickSpec {
                 it("Should get same token") {
                     expect(result).to(equal(token))
                 }
-            }
+            }                                    
         }
     }
 }
